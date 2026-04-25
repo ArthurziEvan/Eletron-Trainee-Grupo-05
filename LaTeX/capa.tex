@@ -1,0 +1,53 @@
+\AddToHookNext{shipout/background}{% Imagem da capa
+    \adjincludegraphics[width=\paperwidth,valign=T]{img_arquivo/capaEJ.png}
+  }
+
+\pagenumbering{roman}
+
+\vspace*{10cm}
+\begin{center}
+  \textbf{
+    \Huge{\textsc{Projeto PS 2026.1}} \\
+    %\Huge{Projeto Template}
+  }    %width=\linewidth
+%\paperwidth
+\end{center}
+
+\vfill
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.23\paperwidth}
+    \includegraphics[width=\linewidth]{img_arquivo/Brjr.png}
+  \end{subfigure}
+  \hspace{1cm}
+  \begin{subfigure}[b]{0.12\paperwidth}
+    \includegraphics[width=\linewidth]{img_arquivo/UnB.pdf}
+  \end{subfigure}
+  \hspace{1cm}
+  \begin{subfigure}[b]{0.23\paperwidth}
+    \includegraphics[width=\linewidth]{img_arquivo/Concentro.png}
+  \end{subfigure}
+\end{figure}
+    
+
+\begin{table}[H]
+    \fontfamily{phv}\selectfont
+    \centering
+    \begin{tabularx}{\textwidth}{
+    >{\centering\arraybackslash}X 
+    >{\centering\arraybackslash}X}
+  \hline
+       Gerente responsável & ...\\
+       Data de início  &  --/0-/2026 \\
+       Data de entrega &  xx/xx/2026 \\ \hline
+    \end{tabularx}
+\end{table}
+\setcounter{table}{0}
+
+\newpage
+\pagenumbering{arabic}
+
+\AddToHook{shipout/background}{% Imagem do cabeçalho
+    \adjincludegraphics[width=\paperwidth,valign=T]{img_arquivo/fundo_default.png}
+  }
