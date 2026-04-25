@@ -1,0 +1,47 @@
+\documentclass[a4paper, 11pt]{article}
+
+\input{includes.tex}
+
+\titleformat*{\section}{\color{verdeEJ}\Large\fontfamily{phv}\selectfont\bfseries}
+\titleformat*{\subsection}{\color{verdeEJ}\large\fontfamily{phv}\selectfont\bfseries}
+\titleformat*{\subsubsection}{\color{verdeEJ}\large\fontfamily{phv}\selectfont}
+
+\begin{document}
+\fontfamily{phv}\selectfont
+
+\input{capa.tex} %%ALTERE A CAPA AQUI%%
+
+\tableofcontents
+\newpage
+%%%%%%%%%%% EDITE A PARTIR DAQUI %%%%%%%%%% 
+\section{Introdução}
+\input{Seções/Introducao.tex}
+\newpage
+
+\section{Análise de Requisitos}
+\input{Seções/Analise de Requisitos}
+\newpage
+
+\section{Diagrama de Blocos}
+\input{Seções/Diagrama de Blocos.tex}
+\newpage
+
+\section{Modelagem do Circuito}
+\input{Seções/Modelagem de Circuito.tex}
+\newpage
+
+\section{Descrição de Hardware}
+\input{Seções/Descricao de Hardware.tex}
+\newpage
+
+\section{Descricao de alto nível}
+\input{Seções/Descricao de Alto nivel.tex}
+\newpage
+
+\section{Descrição de Firmware}
+\input{Seções/Descricao de Firmware.tex}
+\newpage
+
+\section{Bill of Materials}
+\input{Seções/BOM.tex}
+\end{document}

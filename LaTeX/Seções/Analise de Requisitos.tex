@@ -1,0 +1,65 @@
+
+A análise de requisitos é o levantamento de todas as propriedades, características e necessidades do sistema para que esse seja capaz de executar, com a qualidade desejada, as funcionalidades previstas. Essa seção serve de base tanto para o cliente, guiando as expectativas quanto ao projeto a partir da definição sólida de quais serão suas especificações, como para os projetistas, que, ao desenvolverem o sistema de acordo com os requisitos levantados, estarão seguros quanto à sua efetividade para o problema.
+
+Os requisitos funcionais, dispostos na seção 2.2, são propriedades do sistema responsáveis por explicitar suas funcionalidades e como estas atendem às solicitações do projeto. A partir da leitura dos requisitos funcionais, tem-se noção do que o sistema deve ser capaz de executar e quais são as necessidades que ele busca suprir.
+
+Os requisitos não-funcionais, dispostos na seção 2.3, são propriedades do sistema que mostram especificações e características relacionadas ao modo como os requisitos funcionais são operados. A partir da leitura dos requisitos não-funcionais, tem-se noção de informações técnicas e atributos de qualidade de execução das funcionalidades do sistema.
+
+\subsection{Convenções, termos e abreviações}
+
+\subsubsection{Identificação dos Requisitos}
+
+Por convenção, a referência a requisitos é feita através do nome da subseção na qual eles
+estão descritos, seguidos do identificador do requisito, de acordo com o seguinte modelo:
+\begin{center}
+    [ nome da subseção/identificador do requisito ]
+\end{center}
+
+Os requisitos serão identificados com um identificador único, com numeração iniciada em
+[RF01] para um requisito funcional e [NF01] para um requisito não-funcional.
+
+\subsubsection{Propriedades dos requisitos}
+
+Para estabelecer a prioridade dos requisitos, nas seções 2.2 e 2.3, foram adotadas as
+denominações “essencial”, “importante” e “desejável”, tal que:
+
+\textbf{Essencial} é o requisito sem o qual o sistema não entra em funcionamento. Requisitos
+essenciais são aqueles imprescindíveis, que devem ser implementados impreterivelmente.
+
+\textbf{Importante} é o requisito sem o qual o sistema entra em funcionamento, mas de forma não
+satisfatória. Requisitos importantes devem ser implementados, mas, se não forem, o sistema
+poderá ser implementado e usado normalmente.
+
+\textbf{Desejável} é o requisito que não compromete as funcionalidades básicas do sistema, isto é,
+o sistema pode funcionar de forma satisfatória sem ele. Requisitos desejáveis podem ser deixados
+para versões posteriores do sistema, caso não haja tempo hábil para implementação dos mesmos
+nesta etapa.
+
+\subsection{Requisitos Funcionais}
+
+\begin{rfreq}{Requisito...}
+    Descrição do Requisito...
+
+    Prioridade: Essencial.
+\end{rfreq}
+
+\begin{rfreq}{Próximo requisito...}
+    Descrição do requisito...
+    
+    Prioridade: Importante.
+\end{rfreq}
+%%
+\newpage
+\subsection{Requisitos Não-Funcionais}
+
+\begin{nfreq}{Requisito não funcional}
+    Descrição do requisito...
+
+    Prioridade: Essencial.
+\end{nfreq}
+
+\begin{nfreq}{Requisito não funcional}
+    Descrição do requisito...
+
+    Prioridade: Desejável.
+\end{nfreq}
