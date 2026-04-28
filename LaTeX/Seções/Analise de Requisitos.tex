@@ -39,78 +39,201 @@ nesta etapa.
 
 \subsection{Requisitos Funcionais}
 
-\begin{itemize}
+\begin{rfreq}{Aquisição de Dados Ambientais}
+O sistema deve coletar dados de temperatura e umidade do ambiente por meio de um sensor apropriado.
 
-\item \textbf{[RF01] (Essencial)} – O sistema deve coletar dados de temperatura e umidade do ambiente por meio de um sensor apropriado.
+Prioridade:  Essencial.
+\end{rfreq}
 
-\item \textbf{[RF02] (Essencial)} – O sistema deve disponibilizar os dados coletados em uma interface web acessível ao usuário.
+\begin{rfreq}{Disponibilização de Dados em Interface Web}
+O sistema deve disponibilizar os dados coletados em uma interface web acessível ao usuário.
 
-\item \textbf{[RF03] (Essencial)} – O sistema deve atualizar os dados de temperatura e umidade em tempo real na interface web.
+Prioridade:  Essencial.
+\end{rfreq}
 
-\item \textbf{[RF04] (Essencial)} – O sistema deve permitir a alternância entre os modos de operação (Desligado, Automático e Ligado) através da interface web.
+\begin{rfreq}{Atualização em Tempo Real}
+O sistema deve atualizar os dados de temperatura e umidade em tempo real na interface web.
 
-\item \textbf{[RF05] (Essencial)} – O sistema deve indicar visualmente o modo de operação atual por meio de LEDs no hardware.
+Prioridade:  Essencial.
+\end{rfreq}
 
-\item \textbf{[RF06] (Essencial)} – O sistema deve sincronizar o estado dos LEDs com o modo selecionado na interface web.
+\begin{rfreq}{Controle de Modos de Operação}
+O sistema deve permitir a alternância entre os modos de operação (Desligado, Automático e Ligado) através da interface web.
 
-\item \textbf{[RF07] (Essencial)} – No modo automático, o sistema deve realizar a coleta e atualização contínua dos dados.
+Prioridade:  Essencial.
+\end{rfreq}
 
-\item \textbf{[RF08] (Essencial)} – No modo ligado, o sistema deve permanecer ativo e apto a responder às ações do usuário.
+\begin{rfreq}{Indicação Visual de Estado}
+O sistema deve indicar visualmente o modo de operação atual por meio de LEDs no hardware.
 
-\item \textbf{[RF09] (Essencial)} – No modo desligado, o sistema deve interromper a coleta de dados e ativar o LED de desligado.
+Prioridade:  Essencial.
+\end{rfreq}
 
-\item \textbf{[RF10] (Essencial)} – O sistema deve permitir a interface web atualizada sem necessidade de recarregamento manual da página.
+\begin{rfreq}{Sincronização Interface-Hardware}
+O sistema deve sincronizar o estado dos LEDs com o modo selecionado na interface web.
 
-\item \textbf{[RF11] (Essencial)} – No modo ligado, a interface deve disponibilizar botões para requisição manual de leitura de temperatura, umidade ou ambas.
+Prioridade:  Essencial.
+\end{rfreq}
 
-\item \textbf{[RF12] (Importante)} – O sistema deve armazenar um histórico das leituras com data e hora, exibindo-o na interface web.
+\begin{rfreq}{Operação Automática Contínua}
+No modo automático, o sistema deve realizar a coleta e atualização contínua dos dados.
 
-\item \textbf{[RF13] (Importante)} – O sistema deve gravar cada leitura em um arquivo .txt no cartão microSD, no formato CSV (data, hora, temperatura, umidade, modo).
+Prioridade:  Essencial.
+\end{rfreq}
 
-\item \textbf{[RF14] (Importante)} – O sistema deve permitir configurar limites mínimos e máximos e exibir alerta visual quando ultrapassados.
+\begin{rfreq}{Operação Ativa no Modo Ligado}
+No modo ligado, o sistema deve permanecer ativo e apto a responder às ações do usuário.
 
-\item \textbf{[RF15] (Desejável)} – O sistema deve preservar o último modo de operação após reinicialização da ESP32.
+Prioridade:  Essencial.
+\end{rfreq}
 
-\item \textbf{[RF16] (Desejável)} – O sistema deve permitir configurar o intervalo entre leituras automáticas.
+\begin{rfreq}{Desativação do Sistema}
+No modo desligado, o sistema deve interromper a coleta de dados e ativar o LED de desligado.
 
-\item \textbf{[RF17] (Desejável)} – O sistema poderá enviar notificações por e-mail quando limites forem ultrapassados.
+Prioridade:  Essencial.
+\end{rfreq}
 
-\item \textbf{[RF18] (Desejável)} – O sistema poderá ser disponibilizado como aplicativo mobile (React Native).
+\begin{rfreq}{Atualização Dinâmica da Interface}
+O sistema deve permitir a interface web atualizada sem necessidade de recarregamento manual da página.
 
-\item \textbf{[RF19] (Desejável)} – O sistema poderá suportar múltiplos dispositivos ESP32 simultaneamente.
+Prioridade: Essencial.
+\end{rfreq}
 
-\end{itemize}
+\begin{rfreq}{Requisição Manual de Leituras}
+No modo ligado, a interface deve disponibilizar botões para requisição manual de leitura de temperatura, umidade ou ambas.
 
+Prioridade:  Essencial.
+\end{rfreq}
+
+\begin{rfreq}{Registro de Histórico de Dados}
+O sistema deve armazenar um histórico das leituras com data e hora, exibindo-o na interface web.
+
+Prioridade:  Importante.
+\end{rfreq}
+
+\begin{rfreq}{Persistência de Dados em microSD}
+O sistema deve gravar cada leitura em um arquivo .txt no cartão microSD, no formato CSV (data, hora, temperatura, umidade, modo).
+
+Prioridade: Importante.
+\end{rfreq}
+
+\begin{rfreq}{Configuração de Limites e Alertas}
+O sistema deve permitir configurar limites mínimos e máximos e exibir alerta visual quando ultrapassados.
+
+Prioridade:  Importante.
+\end{rfreq}
+
+\begin{rfreq}{Persistência de Estado após Reinicialização}
+O sistema deve preservar o último modo de operação após reinicialização da ESP32.
+
+Prioridade: Desejável.
+\end{rfreq}
+
+\begin{rfreq}{Configuração do Intervalo de Coleta}
+O sistema deve permitir configurar o intervalo entre leituras automáticas.
+
+Prioridade:  Desejável.
+\end{rfreq}
+
+\begin{rfreq}{Notificação por E-mail}
+O sistema poderá enviar notificações por e-mail quando limites forem ultrapassados.
+
+Prioridade Desejável.
+\end{rfreq}
+
+\begin{rfreq}{Disponibilização em Aplicativo Mobile}
+O sistema poderá ser disponibilizado como aplicativo mobile utilizando React Native.
+
+Prioridade: Desejável.
+\end{rfreq}
+
+\begin{rfreq}{Suporte a Múltiplos Dispositivos}
+O sistema poderá suportar múltiplos dispositivos ESP32 simultaneamente.
+
+Prioridade: Desejável.
+\end{rfreq}
 \subsection{Requisitos Não Funcionais}
 
-\begin{itemize}
+\begin{nfreq}{Baixa Latência de Atualização}
+O sistema deve apresentar baixa latência na atualização dos dados.
 
-\item \textbf{[RNF01] (Essencial)} – O sistema deve apresentar baixa latência na atualização dos dados.
+Prioridade:  Essencial.
+\end{nfreq}
 
-\item \textbf{[RNF02] (Essencial)} – O microcontrolador deve possuir comunicação via Wi-Fi.
+\begin{nfreq}{Conectividade Wi-Fi}
+O microcontrolador deve possuir comunicação via rede Wi-Fi.
 
-\item \textbf{[RNF03] (Essencial)} – O sistema deve operar de forma estável continuamente.
+Prioridade:  Essencial.
+\end{nfreq}
 
-\item \textbf{[RNF04] (Essencial)} – Os dados devem respeitar a precisão do sensor.
+\begin{nfreq}{Estabilidade Operacional}
+O sistema deve operar de forma estável durante sua execução contínua.
 
-\item \textbf{[RNF05] (Essencial)} – Deve haver compatibilidade entre hardware e software.
+Prioridade: Essencial.
+\end{nfreq}
 
-\item \textbf{[RNF06] (Essencial)} – A interface deve permitir requisição de dados no modo ligado.
+\begin{nfreq}{Precisão das Medições}
+Os dados exibidos devem respeitar a precisão e a faixa de medição do sensor utilizado.
 
-\item \textbf{[RNF07] (Importante)} – O microSD deve suportar pelo menos 6 meses de dados.
+Prioridade:  Essencial.
+\end{nfreq}
 
-\item \textbf{[RNF08] (Importante)} – Alertas devem aparecer em até 5 segundos após leitura crítica.
+\begin{nfreq}{Compatibilidade Hardware-Software}
+O sistema deve garantir a correta integração entre sensor, microcontrolador e interface web.
 
-\item \textbf{[RNF09] (Importante)} – A gravação no microSD deve evitar corrupção de dados.
+Prioridade:  Essencial.
+\end{nfreq}
 
-\item \textbf{[RNF10] (Desejável)} – O sistema deve suportar pelo menos 4 acessos simultâneos.
+\begin{nfreq}{Interação em Modo Ligado}
+A interface deve permitir requisição de temperatura e umidade no modo ligado.
 
-\item \textbf{[RNF11] (Desejável)} – O sistema poderá implementar watchdog timer.
+Prioridade:  Essencial.
+\end{nfreq}
 
-\item \textbf{[RNF12] (Desejável)} – Configurações poderão ser salvas na memória flash (LittleFS).
+\begin{nfreq}{Capacidade de Armazenamento}
+O cartão microSD deve comportar pelo menos 6 meses de leituras com intervalo de 1 minuto.
 
-\item \textbf{[RNF13] (Desejável)} – O sistema poderá ser acessado externamente via internet.
+Prioridade:  Importante.
+\end{nfreq}
 
-\item \textbf{[RNF14] (Desejável)} – O app mobile deve funcionar em Android e iOS.
+\begin{nfreq}{Tempo de Resposta de Alertas}
+O alerta visual deve ser exibido em no máximo 5 segundos após a leitura crítica.
 
-\end{itemize}
+Prioridade:  Importante.
+\end{nfreq}
+
+\begin{nfreq}{Integridade dos Dados}
+A gravação no microSD deve evitar corrupção de dados em caso de falhas.
+
+Prioridade:  Importante.
+\end{nfreq}
+
+\begin{nfreq}{Suporte a Múltiplos Acessos}
+O sistema deve suportar pelo menos 4 acessos simultâneos sem falhas.
+
+Prioridade:  Desejável.
+\end{nfreq}
+
+\begin{nfreq}{Recuperação Automática de Falhas}
+O sistema poderá implementar watchdog timer para reinicialização automática.
+
+Prioridade:  Desejável.
+\end{nfreq}
+
+\begin{nfreq}{Persistência de Configurações}
+As configurações do usuário poderão ser salvas na memória flash (LittleFS).
+
+Prioridade:  Desejável.
+\end{nfreq}
+
+\begin{nfreq}{Acesso Remoto}
+O sistema poderá ser acessado fora da rede local via internet.
+
+Prioridade:  Desejável.
+\end{nfreq}
+
+\begin{nfreq}{Compatibilidade Mobile}
+O aplicativo mobile poderá funcionar em Android e iOS com uma única base de código.
+
+Prioridade:  Desejável.
+\end{nfreq}
