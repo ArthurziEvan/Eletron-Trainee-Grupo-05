@@ -35,31 +35,205 @@ o sistema pode funcionar de forma satisfatória sem ele. Requisitos desejáveis 
 para versões posteriores do sistema, caso não haja tempo hábil para implementação dos mesmos
 nesta etapa.
 
+\section{Análise de Requisitos}
+
 \subsection{Requisitos Funcionais}
 
-\begin{rfreq}{Requisito...}
-    Descrição do Requisito...
+\begin{rfreq}{Aquisição de Dados Ambientais}
+O sistema deve coletar dados de temperatura e umidade do ambiente por meio de um sensor apropriado.
 
-    Prioridade: Essencial.
+Prioridade:  Essencial.
 \end{rfreq}
 
-\begin{rfreq}{Próximo requisito...}
-    Descrição do requisito...
-    
-    Prioridade: Importante.
+\begin{rfreq}{Disponibilização de Dados em Interface Web}
+O sistema deve disponibilizar os dados coletados em uma interface web acessível ao usuário.
+
+Prioridade:  Essencial.
 \end{rfreq}
-%%
-\newpage
-\subsection{Requisitos Não-Funcionais}
 
-\begin{nfreq}{Requisito não funcional}
-    Descrição do requisito...
+\begin{rfreq}{Atualização em Tempo Real}
+O sistema deve atualizar os dados de temperatura e umidade em tempo real na interface web.
 
-    Prioridade: Essencial.
+Prioridade:  Essencial.
+\end{rfreq}
+
+\begin{rfreq}{Controle de Modos de Operação}
+O sistema deve permitir a alternância entre os modos de operação (Desligado, Automático e Ligado) através da interface web.
+
+Prioridade:  Essencial.
+\end{rfreq}
+
+\begin{rfreq}{Indicação Visual de Estado}
+O sistema deve indicar visualmente o modo de operação atual por meio de LEDs no hardware.
+
+Prioridade:  Essencial.
+\end{rfreq}
+
+\begin{rfreq}{Sincronização Interface-Hardware}
+O sistema deve sincronizar o estado dos LEDs com o modo selecionado na interface web.
+
+Prioridade:  Essencial.
+\end{rfreq}
+
+\begin{rfreq}{Operação Automática Contínua}
+No modo automático, o sistema deve realizar a coleta e atualização contínua dos dados.
+
+Prioridade:  Essencial.
+\end{rfreq}
+
+\begin{rfreq}{Operação Ativa no Modo Ligado}
+No modo ligado, o sistema deve permanecer ativo e apto a responder às ações do usuário.
+
+Prioridade:  Essencial.
+\end{rfreq}
+
+\begin{rfreq}{Desativação do Sistema}
+No modo desligado, o sistema deve interromper a coleta de dados e ativar o LED de desligado.
+
+Prioridade:  Essencial.
+\end{rfreq}
+
+\begin{rfreq}{Atualização Dinâmica da Interface}
+O sistema deve permitir a interface web atualizada sem necessidade de recarregamento manual da página.
+
+Prioridade: Essencial.
+\end{rfreq}
+
+\begin{rfreq}{Requisição Manual de Leituras}
+No modo ligado, a interface deve disponibilizar botões para requisição manual de leitura de temperatura, umidade ou ambas.
+
+Prioridade:  Essencial.
+\end{rfreq}
+
+\begin{rfreq}{Registro de Histórico de Dados}
+O sistema deve armazenar um histórico das leituras com data e hora, exibindo-o na interface web.
+
+Prioridade:  Importante.
+\end{rfreq}
+
+\begin{rfreq}{Persistência de Dados em microSD}
+O sistema deve gravar cada leitura em um arquivo .txt no cartão microSD, no formato CSV (data, hora, temperatura, umidade, modo).
+
+Prioridade: Importante.
+\end{rfreq}
+
+\begin{rfreq}{Configuração de Limites e Alertas}
+O sistema deve permitir configurar limites mínimos e máximos e exibir alerta visual quando ultrapassados.
+
+Prioridade:  Importante.
+\end{rfreq}
+
+\begin{rfreq}{Persistência de Estado após Reinicialização}
+O sistema deve preservar o último modo de operação após reinicialização da ESP32.
+
+Prioridade: Desejável.
+\end{rfreq}
+
+\begin{rfreq}{Configuração do Intervalo de Coleta}
+O sistema deve permitir configurar o intervalo entre leituras automáticas.
+
+Prioridade:  Desejável.
+\end{rfreq}
+
+\begin{rfreq}{Notificação por E-mail}
+O sistema poderá enviar notificações por e-mail quando limites forem ultrapassados.
+
+Prioridade Desejável.
+\end{rfreq}
+
+\begin{rfreq}{Disponibilização em Aplicativo Mobile}
+O sistema poderá ser disponibilizado como aplicativo mobile utilizando React Native.
+
+Prioridade: Desejável.
+\end{rfreq}
+
+\begin{rfreq}{Suporte a Múltiplos Dispositivos}
+O sistema poderá suportar múltiplos dispositivos ESP32 simultaneamente.
+
+Prioridade: Desejável.
+\end{rfreq}
+\subsection{Requisitos Não Funcionais}
+
+\begin{nfreq}{Baixa Latência de Atualização}
+O sistema deve apresentar baixa latência na atualização dos dados.
+
+Prioridade:  Essencial.
 \end{nfreq}
 
-\begin{nfreq}{Requisito não funcional}
-    Descrição do requisito...
+\begin{nfreq}{Conectividade Wi-Fi}
+O microcontrolador deve possuir comunicação via rede Wi-Fi.
 
-    Prioridade: Desejável.
+Prioridade:  Essencial.
+\end{nfreq}
+
+\begin{nfreq}{Estabilidade Operacional}
+O sistema deve operar de forma estável durante sua execução contínua.
+
+Prioridade: Essencial.
+\end{nfreq}
+
+\begin{nfreq}{Precisão das Medições}
+Os dados exibidos devem respeitar a precisão e a faixa de medição do sensor utilizado.
+
+Prioridade:  Essencial.
+\end{nfreq}
+
+\begin{nfreq}{Compatibilidade Hardware-Software}
+O sistema deve garantir a correta integração entre sensor, microcontrolador e interface web.
+
+Prioridade:  Essencial.
+\end{nfreq}
+
+\begin{nfreq}{Interação em Modo Ligado}
+A interface deve permitir requisição de temperatura e umidade no modo ligado.
+
+Prioridade:  Essencial.
+\end{nfreq}
+
+\begin{nfreq}{Capacidade de Armazenamento}
+O cartão microSD deve comportar pelo menos 6 meses de leituras com intervalo de 1 minuto.
+
+Prioridade:  Importante.
+\end{nfreq}
+
+\begin{nfreq}{Tempo de Resposta de Alertas}
+O alerta visual deve ser exibido em no máximo 5 segundos após a leitura crítica.
+
+Prioridade:  Importante.
+\end{nfreq}
+
+\begin{nfreq}{Integridade dos Dados}
+A gravação no microSD deve evitar corrupção de dados em caso de falhas.
+
+Prioridade:  Importante.
+\end{nfreq}
+
+\begin{nfreq}{Suporte a Múltiplos Acessos}
+O sistema deve suportar pelo menos 4 acessos simultâneos sem falhas.
+
+Prioridade:  Desejável.
+\end{nfreq}
+
+\begin{nfreq}{Recuperação Automática de Falhas}
+O sistema poderá implementar watchdog timer para reinicialização automática.
+
+Prioridade:  Desejável.
+\end{nfreq}
+
+\begin{nfreq}{Persistência de Configurações}
+As configurações do usuário poderão ser salvas na memória flash (LittleFS).
+
+Prioridade:  Desejável.
+\end{nfreq}
+
+\begin{nfreq}{Acesso Remoto}
+O sistema poderá ser acessado fora da rede local via internet.
+
+Prioridade:  Desejável.
+\end{nfreq}
+
+\begin{nfreq}{Compatibilidade Mobile}
+O aplicativo mobile poderá funcionar em Android e iOS com uma única base de código.
+
+Prioridade:  Desejável.
 \end{nfreq}
