@@ -35,31 +35,82 @@ o sistema pode funcionar de forma satisfatória sem ele. Requisitos desejáveis 
 para versões posteriores do sistema, caso não haja tempo hábil para implementação dos mesmos
 nesta etapa.
 
+\section{Análise de Requisitos}
+
 \subsection{Requisitos Funcionais}
 
-\begin{rfreq}{Requisito...}
-    Descrição do Requisito...
+\begin{itemize}
 
-    Prioridade: Essencial.
-\end{rfreq}
+\item \textbf{[RF01] (Essencial)} – O sistema deve coletar dados de temperatura e umidade do ambiente por meio de um sensor apropriado.
 
-\begin{rfreq}{Próximo requisito...}
-    Descrição do requisito...
-    
-    Prioridade: Importante.
-\end{rfreq}
-%%
-\newpage
-\subsection{Requisitos Não-Funcionais}
+\item \textbf{[RF02] (Essencial)} – O sistema deve disponibilizar os dados coletados em uma interface web acessível ao usuário.
 
-\begin{nfreq}{Requisito não funcional}
-    Descrição do requisito...
+\item \textbf{[RF03] (Essencial)} – O sistema deve atualizar os dados de temperatura e umidade em tempo real na interface web.
 
-    Prioridade: Essencial.
-\end{nfreq}
+\item \textbf{[RF04] (Essencial)} – O sistema deve permitir a alternância entre os modos de operação (Desligado, Automático e Ligado) através da interface web.
 
-\begin{nfreq}{Requisito não funcional}
-    Descrição do requisito...
+\item \textbf{[RF05] (Essencial)} – O sistema deve indicar visualmente o modo de operação atual por meio de LEDs no hardware.
 
-    Prioridade: Desejável.
-\end{nfreq}
+\item \textbf{[RF06] (Essencial)} – O sistema deve sincronizar o estado dos LEDs com o modo selecionado na interface web.
+
+\item \textbf{[RF07] (Essencial)} – No modo automático, o sistema deve realizar a coleta e atualização contínua dos dados.
+
+\item \textbf{[RF08] (Essencial)} – No modo ligado, o sistema deve permanecer ativo e apto a responder às ações do usuário.
+
+\item \textbf{[RF09] (Essencial)} – No modo desligado, o sistema deve interromper a coleta de dados e ativar o LED de desligado.
+
+\item \textbf{[RF10] (Essencial)} – O sistema deve permitir a interface web atualizada sem necessidade de recarregamento manual da página.
+
+\item \textbf{[RF11] (Essencial)} – No modo ligado, a interface deve disponibilizar botões para requisição manual de leitura de temperatura, umidade ou ambas.
+
+\item \textbf{[RF12] (Importante)} – O sistema deve armazenar um histórico das leituras com data e hora, exibindo-o na interface web.
+
+\item \textbf{[RF13] (Importante)} – O sistema deve gravar cada leitura em um arquivo .txt no cartão microSD, no formato CSV (data, hora, temperatura, umidade, modo).
+
+\item \textbf{[RF14] (Importante)} – O sistema deve permitir configurar limites mínimos e máximos e exibir alerta visual quando ultrapassados.
+
+\item \textbf{[RF15] (Desejável)} – O sistema deve preservar o último modo de operação após reinicialização da ESP32.
+
+\item \textbf{[RF16] (Desejável)} – O sistema deve permitir configurar o intervalo entre leituras automáticas.
+
+\item \textbf{[RF17] (Desejável)} – O sistema poderá enviar notificações por e-mail quando limites forem ultrapassados.
+
+\item \textbf{[RF18] (Desejável)} – O sistema poderá ser disponibilizado como aplicativo mobile (React Native).
+
+\item \textbf{[RF19] (Desejável)} – O sistema poderá suportar múltiplos dispositivos ESP32 simultaneamente.
+
+\end{itemize}
+
+\subsection{Requisitos Não Funcionais}
+
+\begin{itemize}
+
+\item \textbf{[RNF01] (Essencial)} – O sistema deve apresentar baixa latência na atualização dos dados.
+
+\item \textbf{[RNF02] (Essencial)} – O microcontrolador deve possuir comunicação via Wi-Fi.
+
+\item \textbf{[RNF03] (Essencial)} – O sistema deve operar de forma estável continuamente.
+
+\item \textbf{[RNF04] (Essencial)} – Os dados devem respeitar a precisão do sensor.
+
+\item \textbf{[RNF05] (Essencial)} – Deve haver compatibilidade entre hardware e software.
+
+\item \textbf{[RNF06] (Essencial)} – A interface deve permitir requisição de dados no modo ligado.
+
+\item \textbf{[RNF07] (Importante)} – O microSD deve suportar pelo menos 6 meses de dados.
+
+\item \textbf{[RNF08] (Importante)} – Alertas devem aparecer em até 5 segundos após leitura crítica.
+
+\item \textbf{[RNF09] (Importante)} – A gravação no microSD deve evitar corrupção de dados.
+
+\item \textbf{[RNF10] (Desejável)} – O sistema deve suportar pelo menos 4 acessos simultâneos.
+
+\item \textbf{[RNF11] (Desejável)} – O sistema poderá implementar watchdog timer.
+
+\item \textbf{[RNF12] (Desejável)} – Configurações poderão ser salvas na memória flash (LittleFS).
+
+\item \textbf{[RNF13] (Desejável)} – O sistema poderá ser acessado externamente via internet.
+
+\item \textbf{[RNF14] (Desejável)} – O app mobile deve funcionar em Android e iOS.
+
+\end{itemize}
