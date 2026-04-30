@@ -1,22 +1,58 @@
 \babel@toc {brazilian}{}\relax 
-\contentsline {section}{\numberline {1}Introdução}{2}{section.1}%
-\contentsline {section}{\numberline {2}Análise de Requisitos}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Convenções, termos e abreviações}{3}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Identificação dos Requisitos}{3}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Propriedades dos requisitos}{3}{subsubsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.2}Requisitos Funcionais}{4}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}[RF01] \textcolor {black}{[Requisito...]}}{4}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}[RF02] \textcolor {black}{[Próximo requisito...]}}{4}{subsubsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.3}Requisitos Não-Funcionais}{5}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}[NF01] \textcolor {black}{[Requisito não funcional]}}{5}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}[NF02] \textcolor {black}{[Requisito não funcional]}}{5}{subsubsection.2.3.2}%
-\contentsline {section}{\numberline {3}Diagrama de Blocos}{6}{section.3}%
-\contentsline {section}{\numberline {4}Modelagem do Circuito}{7}{section.4}%
-\contentsline {section}{\numberline {5}Descrição de Hardware}{8}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Arquitetura Geral}{8}{subsection.5.1}%
-\contentsline {section}{\numberline {6}Descricao de alto nível}{9}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Subsistema de alimentação}{9}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}...}{9}{subsubsection.6.1.1}%
-\contentsline {section}{\numberline {7}Descrição de Firmware}{10}{section.7}%
-\contentsline {section}{\numberline {8}Bill of Materials}{11}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Total}{11}{subsection.8.1}%
+\contentsline {section}{\numberline {1}Introdução}{3}{section.1}%
+\contentsline {section}{\numberline {2}Análise de Requisitos}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Convenções, termos e abreviações}{4}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Identificação dos Requisitos}{4}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Propriedades dos requisitos}{4}{subsubsection.2.1.2}%
+\contentsline {section}{\numberline {3}Análise de Requisitos}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Requisitos Funcionais}{5}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}[RF01] \textcolor {black}{[Aquisição de Dados Ambientais]}}{5}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}[RF02] \textcolor {black}{[Disponibilização de Dados em Interface Web]}}{5}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}[RF03] \textcolor {black}{[Atualização em Tempo Real]}}{5}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}[RF04] \textcolor {black}{[Controle de Modos de Operação]}}{5}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.5}[RF05] \textcolor {black}{[Indicação Visual de Estado]}}{5}{subsubsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.6}[RF06] \textcolor {black}{[Sincronização Interface-Hardware]}}{5}{subsubsection.3.1.6}%
+\contentsline {subsubsection}{\numberline {3.1.7}[RF07] \textcolor {black}{[Operação Automática Contínua]}}{5}{subsubsection.3.1.7}%
+\contentsline {subsubsection}{\numberline {3.1.8}[RF08] \textcolor {black}{[Operação Ativa no Modo Ligado]}}{6}{subsubsection.3.1.8}%
+\contentsline {subsubsection}{\numberline {3.1.9}[RF09] \textcolor {black}{[Desativação do Sistema]}}{6}{subsubsection.3.1.9}%
+\contentsline {subsubsection}{\numberline {3.1.10}[RF10] \textcolor {black}{[Atualização Dinâmica da Interface]}}{6}{subsubsection.3.1.10}%
+\contentsline {subsubsection}{\numberline {3.1.11}[RF11] \textcolor {black}{[Requisição Manual de Leituras]}}{6}{subsubsection.3.1.11}%
+\contentsline {subsubsection}{\numberline {3.1.12}[RF12] \textcolor {black}{[Registro de Histórico de Dados]}}{6}{subsubsection.3.1.12}%
+\contentsline {subsubsection}{\numberline {3.1.13}[RF13] \textcolor {black}{[Persistência de Dados em microSD]}}{6}{subsubsection.3.1.13}%
+\contentsline {subsubsection}{\numberline {3.1.14}[RF14] \textcolor {black}{[Configuração de Limites e Alertas]}}{6}{subsubsection.3.1.14}%
+\contentsline {subsubsection}{\numberline {3.1.15}[RF15] \textcolor {black}{[Persistência de Estado após Reinicialização]}}{6}{subsubsection.3.1.15}%
+\contentsline {subsubsection}{\numberline {3.1.16}[RF16] \textcolor {black}{[Configuração do Intervalo de Coleta]}}{7}{subsubsection.3.1.16}%
+\contentsline {subsubsection}{\numberline {3.1.17}[RF17] \textcolor {black}{[Notificação por E-mail]}}{7}{subsubsection.3.1.17}%
+\contentsline {subsubsection}{\numberline {3.1.18}[RF18] \textcolor {black}{[Disponibilização em Aplicativo Mobile]}}{7}{subsubsection.3.1.18}%
+\contentsline {subsubsection}{\numberline {3.1.19}[RF19] \textcolor {black}{[Suporte a Múltiplos Dispositivos]}}{7}{subsubsection.3.1.19}%
+\contentsline {subsection}{\numberline {3.2}Requisitos Não Funcionais}{7}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}[NF01] \textcolor {black}{[Baixa Latência de Atualização]}}{7}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}[NF02] \textcolor {black}{[Conectividade Wi-Fi]}}{7}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}[NF03] \textcolor {black}{[Estabilidade Operacional]}}{7}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}[NF04] \textcolor {black}{[Precisão das Medições]}}{7}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}[NF05] \textcolor {black}{[Compatibilidade Hardware-Software]}}{7}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}[NF06] \textcolor {black}{[Interação em Modo Ligado]}}{8}{subsubsection.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.2.7}[NF07] \textcolor {black}{[Capacidade de Armazenamento]}}{8}{subsubsection.3.2.7}%
+\contentsline {subsubsection}{\numberline {3.2.8}[NF08] \textcolor {black}{[Tempo de Resposta de Alertas]}}{8}{subsubsection.3.2.8}%
+\contentsline {subsubsection}{\numberline {3.2.9}[NF09] \textcolor {black}{[Integridade dos Dados]}}{8}{subsubsection.3.2.9}%
+\contentsline {subsubsection}{\numberline {3.2.10}[NF10] \textcolor {black}{[Suporte a Múltiplos Acessos]}}{8}{subsubsection.3.2.10}%
+\contentsline {subsubsection}{\numberline {3.2.11}[NF11] \textcolor {black}{[Recuperação Automática de Falhas]}}{8}{subsubsection.3.2.11}%
+\contentsline {subsubsection}{\numberline {3.2.12}[NF12] \textcolor {black}{[Persistência de Configurações]}}{8}{subsubsection.3.2.12}%
+\contentsline {subsubsection}{\numberline {3.2.13}[NF13] \textcolor {black}{[Acesso Remoto]}}{8}{subsubsection.3.2.13}%
+\contentsline {subsubsection}{\numberline {3.2.14}[NF14] \textcolor {black}{[Compatibilidade Mobile]}}{8}{subsubsection.3.2.14}%
+\contentsline {section}{\numberline {4}Fluxograma do Software}{9}{section.4}%
+\contentsline {section}{\numberline {5}Diagrama de Blocos}{10}{section.5}%
+\contentsline {section}{\numberline {6}Modelagem do Circuito}{11}{section.6}%
+\contentsline {section}{\numberline {7}Descrição de Hardware}{12}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Arquitetura Geral}{12}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Componentes e Justificativas Técnicas}{12}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Dimensionamento e Alimentação}{13}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Estrutura Física e Montagem}{13}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Mapa de Conexões (Pinagem Validada)}{13}{subsection.7.5}%
+\contentsline {section}{\numberline {8}Descricao de Alto nível}{14}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Subsistema de Alimentação e Regulação}{14}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Subsistema de Sensoriamento e Armazenamento}{14}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Subsistema de Interface e Atuação}{14}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Descrição de Firmware}{15}{section.9}%
+\contentsline {section}{\numberline {10}Bill of Materials}{16}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Total}{16}{subsection.10.1}%

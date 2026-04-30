@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.25)  25 APR 2026 14:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.30)  30 APR 2026 17:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Arthur/Desktop/LaTeX/main.tex
-(c:/Users/Arthur/Desktop/LaTeX/main.tex
+**c:/Users/Arthur/Desktop/Eletron-Trainee-Grupo-05/Eletron-Trainee-Grupo-05/LaTeX/main.tex
+(c:/Users/Arthur/Desktop/Eletron-Trainee-Grupo-05/Eletron-Trainee-Grupo-05/LaTeX/main.tex
 LaTeX2e <2025-11-01>
-L3 programming layer <2025-12-24>
+L3 programming layer <2026-03-20>
 (D:\PastaMiks\tex/latex/base\article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (D:\PastaMiks\tex/latex/base\size11.clo
@@ -22,52 +22,29 @@ File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \c@table=\count282
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen148
-) (includes.tex (D:\PastaMiks\tex/latex/lipsum\lipsum.sty (D:\PastaMiks\tex/latex/l3packages/l3keys2e\l3keys2e.sty (D:\PastaMiks\tex/latex/l3kernel\expl3.sty
-Package: expl3 2025-12-24 L3 programming layer (loader) 
- (D:\PastaMiks\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count283
-))
-Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
-)
-Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count284
-\l__lipsum_a_int=\count285
-\l__lipsum_b_int=\count286
- (D:\PastaMiks\tex/latex/lipsum\lipsum.ltd.tex)) (D:\PastaMiks\tex/latex/titlesec\titlesec.sty
-Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box53
-\beforetitleunit=\skip51
-\aftertitleunit=\skip52
-\ttl@plus=\dimen149
-\ttl@minus=\dimen150
-\ttl@toksa=\toks17
-\titlewidth=\dimen151
-\titlewidthlast=\dimen152
-\titlewidthfirst=\dimen153
-) (D:\PastaMiks\tex/latex/base\inputenc.sty
+\bibindent=\dimen150
+) (includes.tex (D:\PastaMiks\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
-\inpenc@prehook=\toks18
-\inpenc@posthook=\toks19
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
 ) (D:\PastaMiks\tex/generic/babel\babel.sty
-Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
-\babel@savecnt=\count287
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2068.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2070.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2072.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2073.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2074.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2076.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2101.
-\U@D=\dimen154
+Package: babel 2026/04/15 v26.6 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+\babel@savecnt=\count283
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2078.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2080.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2082.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2083.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
+\U@D=\dimen151
 \l@unhyphenated=\language79
  (D:\PastaMiks\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count288
+\bbl@dirlevel=\count284
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
-(babel)             Reported on input line 4196.
+(babel)             Reported on input line 4206.
 
 *************************************
 * Local config file bblopts.cfg used
@@ -76,7 +53,7 @@ Package babel Info: Configuration files are deprecated, as
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
 ) (D:\PastaMiks\tex/generic/babel/locale/pt\babel-brazilian.tex)
 Package babel Info: Importing font and identification data for brazilian
-(babel)             from babel-pt-BR.ini. Reported on input line 4320.
+(babel)             from babel-pt-BR.ini. Reported on input line 4330.
  (D:\PastaMiks\tex/latex/babel-portuges\brazilian.ldf
 Language: portuges 2026/01/24 v1.2u Portuguese support from the babel system
 Package babel Info: Hyphen rules for 'brazilian' set to \l@portuguese
@@ -88,7 +65,7 @@ Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
  (D:\PastaMiks\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks20
+\KV@toks@=\toks19
 ) (D:\PastaMiks\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
  (D:\PastaMiks\tex/latex/graphics\trig.sty
@@ -100,8 +77,8 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
  (D:\PastaMiks\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen155
-\Gin@req@width=\dimen156
+\Gin@req@height=\dimen152
+\Gin@req@width=\dimen153
 ) (D:\PastaMiks\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
  (D:\PastaMiks\tex/latex/graphics-cfg\color.cfg
@@ -124,40 +101,40 @@ File: svgnam.def 2024/09/29 v3.02 Predefined colors according to SVG 1.1 (UK)
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
  (D:\PastaMiks\tex/latex/tools\array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen157
-\ar@mcellbox=\box54
-\extrarowheight=\dimen158
-\NC@list=\toks21
-\extratabsurround=\skip53
-\backup@length=\skip54
-\ar@cellbox=\box55
+\col@sep=\dimen154
+\ar@mcellbox=\box53
+\extrarowheight=\dimen155
+\NC@list=\toks20
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box54
 )
-\everycr=\toks22
-\minrowclearance=\skip55
-\rownum=\count289
+\everycr=\toks21
+\minrowclearance=\skip53
+\rownum=\count285
 ) (D:\PastaMiks\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
  (D:\PastaMiks\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
  (D:\PastaMiks\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen159
-\captionmargin=\dimen160
-\caption@leftmargin=\dimen161
-\caption@rightmargin=\dimen162
-\caption@width=\dimen163
-\caption@indent=\dimen164
-\caption@parindent=\dimen165
-\caption@hangindent=\dimen166
+\caption@tempdima=\dimen156
+\captionmargin=\dimen157
+\caption@leftmargin=\dimen158
+\caption@rightmargin=\dimen159
+\caption@width=\dimen160
+\caption@indent=\dimen161
+\caption@parindent=\dimen162
+\caption@hangindent=\dimen163
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count290
-\c@continuedfloat=\count291
+\c@caption@flags=\count286
+\c@continuedfloat=\count287
 )
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count292
+\c@subfigure=\count288
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count293
+\c@subtable=\count289
 ) (D:\PastaMiks\tex/latex/geometry\geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
  (D:\PastaMiks\tex/generic/iftex\ifvtex.sty
@@ -165,27 +142,27 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (D:\PastaMiks\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count294
-\Gm@cntv=\count295
-\c@Gm@tempcnt=\count296
-\Gm@bindingoffset=\dimen167
-\Gm@wd@mp=\dimen168
-\Gm@odd@mp=\dimen169
-\Gm@even@mp=\dimen170
-\Gm@layoutwidth=\dimen171
-\Gm@layoutheight=\dimen172
-\Gm@layouthoffset=\dimen173
-\Gm@layoutvoffset=\dimen174
-\Gm@dimlist=\toks23
+\Gm@cnth=\count290
+\Gm@cntv=\count291
+\c@Gm@tempcnt=\count292
+\Gm@bindingoffset=\dimen164
+\Gm@wd@mp=\dimen165
+\Gm@odd@mp=\dimen166
+\Gm@even@mp=\dimen167
+\Gm@layoutwidth=\dimen168
+\Gm@layoutheight=\dimen169
+\Gm@layouthoffset=\dimen170
+\Gm@layoutvoffset=\dimen171
+\Gm@dimlist=\toks22
  (D:\PastaMiks\tex/latex/geometry\geometry.cfg)) (D:\PastaMiks\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 ) (D:\PastaMiks\tex/latex/tools\indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 ) (D:\PastaMiks\tex/latex/tools\enumerate.sty
 Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
-\@enLab=\toks24
+\@enLab=\toks23
 ) (D:\PastaMiks\tex/latex/hyperref\nameref.sty
-Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
  (D:\PastaMiks\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
  (D:\PastaMiks\tex/generic/ltxcmds\ltxcmds.sty
@@ -199,7 +176,7 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
  (D:\PastaMiks\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )))
-\c@section@level=\count297
+\c@section@level=\count293
 ) (D:\PastaMiks\tex/latex/anyfontsize\anyfontsize.sty
 Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
 ) (D:\PastaMiks\tex/latex/blindtext\blindtext.sty
@@ -207,50 +184,63 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
  (D:\PastaMiks\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count298
-\c@Blindtext=\count299
-\c@blind@countparstart=\count300
-\blind@countxx=\count301
-\blindtext@numBlindtext=\count302
-\blind@countyy=\count303
-\c@blindlist=\count304
-\c@blindlistlevel=\count305
-\c@blindlist@level=\count306
-\blind@listitem=\count307
-\c@blind@listcount=\count308
-\c@blind@levelcount=\count309
-\blind@mathformula=\count310
-\blind@Mathformula=\count311
-\c@blind@randomcount=\count312
-\c@blind@randommax=\count313
-\c@blind@pangramcount=\count314
-\c@blind@pangrammax=\count315
-) (D:\PastaMiks\tex/latex/comment\comment.sty
+\c@blindtext=\count294
+\c@Blindtext=\count295
+\c@blind@countparstart=\count296
+\blind@countxx=\count297
+\blindtext@numBlindtext=\count298
+\blind@countyy=\count299
+\c@blindlist=\count300
+\c@blindlistlevel=\count301
+\c@blindlist@level=\count302
+\blind@listitem=\count303
+\c@blind@listcount=\count304
+\c@blind@levelcount=\count305
+\blind@mathformula=\count306
+\blind@Mathformula=\count307
+\c@blind@randomcount=\count308
+\c@blind@randommax=\count309
+\c@blind@pangramcount=\count310
+\c@blind@pangrammax=\count311
+) (D:\PastaMiks\tex/latex/lipsum\lipsum.sty (D:\PastaMiks\tex/latex/l3packages/l3keys2e\l3keys2e.sty (D:\PastaMiks\tex/latex/l3kernel\expl3.sty
+Package: expl3 2026-03-20 L3 programming layer (loader) 
+ (D:\PastaMiks\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count312
+))
+Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count313
+\l__lipsum_a_int=\count314
+\l__lipsum_b_int=\count315
+ (D:\PastaMiks\tex/latex/lipsum\lipsum.ltd.tex)) (D:\PastaMiks\tex/latex/comment\comment.sty
 \CommentStream=\write3
  Excluding comment 'comment') (D:\PastaMiks\tex/latex/tools\multicol.sty
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \c@tracingmulticols=\count316
-\mult@box=\box56
-\multicol@leftmargin=\dimen175
+\mult@box=\box55
+\multicol@leftmargin=\dimen172
 \c@unbalance=\count317
 \c@collectmore=\count318
 \doublecol@number=\count319
 \multicoltolerance=\count320
 \multicolpretolerance=\count321
-\full@width=\dimen176
-\page@free=\dimen177
-\premulticols=\dimen178
-\postmulticols=\dimen179
-\multicolsep=\skip56
-\multicolbaselineskip=\skip57
-\partial@page=\box57
-\last@line=\box58
-\mc@boxedresult=\box59
-\maxbalancingoverflow=\dimen180
-\mult@rightbox=\box60
-\mult@grightbox=\box61
-\mult@firstbox=\box62
-\mult@gfirstbox=\box63
+\full@width=\dimen173
+\page@free=\dimen174
+\premulticols=\dimen175
+\postmulticols=\dimen176
+\multicolsep=\skip54
+\multicolbaselineskip=\skip55
+\partial@page=\box56
+\last@line=\box57
+\mc@boxedresult=\box58
+\maxbalancingoverflow=\dimen177
+\mult@rightbox=\box59
+\mult@grightbox=\box60
+\mult@firstbox=\box61
+\mult@gfirstbox=\box62
+\@tempa=\box63
 \@tempa=\box64
 \@tempa=\box65
 \@tempa=\box66
@@ -286,25 +276,24 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \@tempa=\box96
 \@tempa=\box97
 \@tempa=\box98
-\@tempa=\box99
 \c@minrows=\count322
 \c@columnbadness=\count323
 \c@finalcolumnbadness=\count324
-\last@try=\dimen181
-\multicolovershoot=\dimen182
-\multicolundershoot=\dimen183
-\mult@nat@firstbox=\box100
-\colbreak@box=\box101
+\last@try=\dimen178
+\multicolovershoot=\dimen179
+\multicolundershoot=\dimen180
+\mult@nat@firstbox=\box99
+\colbreak@box=\box100
 \mc@col@check@num=\count325
 \g__mc_curr_col_int=\count326
 ) (D:\PastaMiks\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip58
+\multirow@colwidth=\skip56
 \multirow@cntb=\count327
-\multirow@dima=\skip59
-\bigstrutjot=\dimen184
+\multirow@dima=\skip57
+\bigstrutjot=\dimen181
 ) (D:\PastaMiks\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
  (D:\PastaMiks\tex/generic/kvdefinekeys\kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ) (D:\PastaMiks\tex/generic/pdfescape\pdfescape.sty
@@ -322,11 +311,11 @@ Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 ) (D:\PastaMiks\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen185
+\@linkdim=\dimen182
 \Hy@linkcounter=\count329
 \Hy@pagecounter=\count330
  (D:\PastaMiks\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 ) (D:\PastaMiks\tex/generic/intcalc\intcalc.sty
@@ -334,46 +323,46 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count331
  (D:\PastaMiks\tex/latex/hyperref\puenc.def
-File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4195.
-Package hyperref Info: Link nesting OFF on input line 4200.
-Package hyperref Info: Hyper index ON on input line 4203.
-Package hyperref Info: Plain pages OFF on input line 4210.
-Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Hyper figures OFF on input line 4199.
+Package hyperref Info: Link nesting OFF on input line 4204.
+Package hyperref Info: Hyper index ON on input line 4207.
+Package hyperref Info: Plain pages OFF on input line 4214.
+Package hyperref Info: Backreferencing OFF on input line 4219.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4462.
+Package hyperref Info: Bookmarks ON on input line 4466.
 \c@Hy@tempcnt=\count332
  (D:\PastaMiks\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen186
+LaTeX Info: Redefining \url on input line 4805.
+\XeTeXLinkMargin=\dimen183
  (D:\PastaMiks\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (D:\PastaMiks\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count333
-\Field@Width=\dimen187
-\Fld@charsize=\dimen188
-Package hyperref Info: Hyper figures OFF on input line 6078.
-Package hyperref Info: Link nesting OFF on input line 6083.
-Package hyperref Info: Hyper index ON on input line 6086.
-Package hyperref Info: backreferencing OFF on input line 6093.
-Package hyperref Info: Link coloring OFF on input line 6098.
-Package hyperref Info: Link coloring with OCG OFF on input line 6103.
-Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Field@Width=\dimen184
+\Fld@charsize=\dimen185
+Package hyperref Info: Hyper figures OFF on input line 6091.
+Package hyperref Info: Link nesting OFF on input line 6096.
+Package hyperref Info: Hyper index ON on input line 6099.
+Package hyperref Info: backreferencing OFF on input line 6106.
+Package hyperref Info: Link coloring OFF on input line 6111.
+Package hyperref Info: Link coloring with OCG OFF on input line 6116.
+Package hyperref Info: PDF/A mode OFF on input line 6121.
 \Hy@abspage=\count334
 \c@Item=\count335
 \c@Hfootnote=\count336
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (D:\PastaMiks\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+File: hpdftex.def 2026-04-24 v7.01q Hyperref driver for pdfTeX
 \Fld@listcount=\count337
 \c@bookmark@seq@number=\count338
  (D:\PastaMiks\tex/latex/rerunfilecheck\rerunfilecheck.sty
@@ -383,13 +372,138 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
-\Hy@SectionHShift=\skip60
+\Hy@SectionHShift=\skip58
+) (D:\PastaMiks\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box101
+\beforetitleunit=\skip59
+\aftertitleunit=\skip60
+\ttl@plus=\dimen186
+\ttl@minus=\dimen187
+\ttl@toksa=\toks24
+\titlewidth=\dimen188
+\titlewidthlast=\dimen189
+\titlewidthfirst=\dimen190
+) (D:\PastaMiks\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen191
+\lightrulewidth=\dimen192
+\cmidrulewidth=\dimen193
+\belowrulesep=\dimen194
+\belowbottomsep=\dimen195
+\aboverulesep=\dimen196
+\abovetopsep=\dimen197
+\cmidrulesep=\dimen198
+\cmidrulekern=\dimen199
+\defaultaddspace=\dimen256
+\@cmidla=\count339
+\@cmidlb=\count340
+\@aboverulesep=\dimen257
+\@belowrulesep=\dimen258
+\@thisruleclass=\count341
+\@lastruleclass=\count342
+\@thisrulewidth=\dimen259
+) (D:\PastaMiks\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen260
+\TX@old@table=\dimen261
+\TX@old@col=\dimen262
+\TX@target=\dimen263
+\TX@delta=\dimen264
+\TX@cols=\count343
+\TX@ftn=\toks25
+) (D:\PastaMiks\tex/latex/tools\longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip61
+\LTright=\skip62
+\LTpre=\skip63
+\LTpost=\skip64
+\LTchunksize=\count344
+\LTcapwidth=\dimen265
+\LT@head=\box102
+\LT@firsthead=\box103
+\LT@foot=\box104
+\LT@lastfoot=\box105
+\LT@gbox=\box106
+\LT@cols=\count345
+\LT@rows=\count346
+\c@LT@tables=\count347
+\c@LT@chunks=\count348
+\LT@p@ftn=\toks26
+) (D:\PastaMiks\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count349
+\float@exts=\toks27
+\float@box=\box107
+\@float@everytoks=\toks28
+\@floatcapt=\box108
+) (D:\PastaMiks\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
+ (D:\PastaMiks\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (D:\PastaMiks\tex/generic/xkeyval\xkeyval.tex (D:\PastaMiks\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks29
+\XKV@tempa@toks=\toks30
+)
+\XKV@depth=\count350
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (D:\PastaMiks\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (D:\PastaMiks\tex/latex/adjustbox\trimclip.sty
+Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
+ (D:\PastaMiks\tex/latex/collectbox\collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box109
+)
+\tc@llx=\dimen266
+\tc@lly=\dimen267
+\tc@urx=\dimen268
+\tc@ury=\dimen269
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (D:\PastaMiks\tex/latex/adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen270
+\adjbox@Height=\dimen271
+\adjbox@Depth=\dimen272
+\adjbox@Totalheight=\dimen273
+\adjbox@pwidth=\dimen274
+\adjbox@pheight=\dimen275
+\adjbox@pdepth=\dimen276
+\adjbox@ptotalheight=\dimen277
+ (D:\PastaMiks\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count351
+) (D:\PastaMiks\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box110
+\sift@deathcycles=\count352
+\@vwid@loff=\dimen278
+\@vwid@roff=\dimen279
+)
+==> First Aid for varwidth.sty applied!
+) (D:\PastaMiks\tex/latex/ragged2e\ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip65
+\RaggedLeftLeftskip=\skip66
+\RaggedRightLeftskip=\skip67
+\CenteringRightskip=\skip68
+\RaggedLeftRightskip=\skip69
+\RaggedRightRightskip=\skip70
+\CenteringParfillskip=\skip71
+\RaggedLeftParfillskip=\skip72
+\RaggedRightParfillskip=\skip73
+\JustifyingParfillskip=\skip74
+\CenteringParindent=\skip75
+\RaggedLeftParindent=\skip76
+\RaggedRightParindent=\skip77
+\JustifyingParindent=\skip78
 ) (D:\PastaMiks\tex/latex/pgf/frontendlayer\tikz.sty (D:\PastaMiks\tex/latex/pgf/basiclayer\pgf.sty (D:\PastaMiks\tex/latex/pgf/utilities\pgfrcs.sty (D:\PastaMiks\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks25
-\pgfutil@tempdima=\dimen189
-\pgfutil@tempdimb=\dimen190
+\pgfutil@everybye=\toks31
+\pgfutil@tempdima=\dimen280
+\pgfutil@tempdimb=\dimen281
 ) (D:\PastaMiks\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box102
+\pgfutil@abb=\box111
 ) (D:\PastaMiks\tex/generic/pgf/utilities\pgfrcs.code.tex (D:\PastaMiks\tex/generic/pgf\pgf.revision.tex)
 Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
@@ -397,31 +511,31 @@ Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
  (D:\PastaMiks\tex/latex/pgf/basiclayer\pgfcore.sty (D:\PastaMiks\tex/latex/pgf/systemlayer\pgfsys.sty (D:\PastaMiks\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
  (D:\PastaMiks\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks26
-\pgfkeys@temptoks=\toks27
+\pgfkeys@pathtoks=\toks32
+\pgfkeys@temptoks=\toks33
  (D:\PastaMiks\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks28
+\pgfkeys@tmptoks=\toks34
 ))
-\pgf@x=\dimen191
-\pgf@y=\dimen192
-\pgf@xa=\dimen193
-\pgf@ya=\dimen194
-\pgf@xb=\dimen195
-\pgf@yb=\dimen196
-\pgf@xc=\dimen197
-\pgf@yc=\dimen198
-\pgf@xd=\dimen199
-\pgf@yd=\dimen256
+\pgf@x=\dimen282
+\pgf@y=\dimen283
+\pgf@xa=\dimen284
+\pgf@ya=\dimen285
+\pgf@xb=\dimen286
+\pgf@yb=\dimen287
+\pgf@xc=\dimen288
+\pgf@yc=\dimen289
+\pgf@xd=\dimen290
+\pgf@yd=\dimen291
 \w@pgf@writea=\write4
 \r@pgf@reada=\read3
-\c@pgf@counta=\count339
-\c@pgf@countb=\count340
-\c@pgf@countc=\count341
-\c@pgf@countd=\count342
-\t@pgf@toka=\toks29
-\t@pgf@tokb=\toks30
-\t@pgf@tokc=\toks31
-\pgf@sys@id@count=\count343
+\c@pgf@counta=\count353
+\c@pgf@countb=\count354
+\c@pgf@countc=\count355
+\c@pgf@countd=\count356
+\t@pgf@toka=\toks35
+\t@pgf@tokb=\toks36
+\t@pgf@tokc=\toks37
+\pgf@sys@id@count=\count357
  (D:\PastaMiks\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
@@ -432,59 +546,59 @@ File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 ))) (D:\PastaMiks\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count344
-\pgfsyssoftpath@bigbuffer@items=\count345
+\pgfsyssoftpath@smallbuffer@items=\count358
+\pgfsyssoftpath@bigbuffer@items=\count359
 ) (D:\PastaMiks\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
  (D:\PastaMiks\tex/generic/pgf/math\pgfmath.code.tex (D:\PastaMiks\tex/generic/pgf/math\pgfmathutil.code.tex) (D:\PastaMiks\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen257
-\pgfmath@count=\count346
-\pgfmath@box=\box103
-\pgfmath@toks=\toks32
-\pgfmath@stack@operand=\toks33
-\pgfmath@stack@operation=\toks34
+\pgfmath@dimen=\dimen292
+\pgfmath@count=\count360
+\pgfmath@box=\box112
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
 ) (D:\PastaMiks\tex/generic/pgf/math\pgfmathfunctions.code.tex) (D:\PastaMiks\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (D:\PastaMiks\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (D:\PastaMiks\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (D:\PastaMiks\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (D:\PastaMiks\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (D:\PastaMiks\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (D:\PastaMiks\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (D:\PastaMiks\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (D:\PastaMiks\tex/generic/pgf/math\pgfmathcalc.code.tex) (D:\PastaMiks\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count347
+\c@pgfmathroundto@lastzeros=\count361
 )) (D:\PastaMiks\tex/generic/pgf/math\pgfint.code.tex) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen258
-\pgf@picmaxx=\dimen259
-\pgf@picminy=\dimen260
-\pgf@picmaxy=\dimen261
-\pgf@pathminx=\dimen262
-\pgf@pathmaxx=\dimen263
-\pgf@pathminy=\dimen264
-\pgf@pathmaxy=\dimen265
-\pgf@xx=\dimen266
-\pgf@xy=\dimen267
-\pgf@yx=\dimen268
-\pgf@yy=\dimen269
-\pgf@zx=\dimen270
-\pgf@zy=\dimen271
+\pgf@picminx=\dimen293
+\pgf@picmaxx=\dimen294
+\pgf@picminy=\dimen295
+\pgf@picmaxy=\dimen296
+\pgf@pathminx=\dimen297
+\pgf@pathmaxx=\dimen298
+\pgf@pathminy=\dimen299
+\pgf@pathmaxy=\dimen300
+\pgf@xx=\dimen301
+\pgf@xy=\dimen302
+\pgf@yx=\dimen303
+\pgf@yy=\dimen304
+\pgf@zx=\dimen305
+\pgf@zy=\dimen306
 ) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen272
-\pgf@path@lasty=\dimen273
+\pgf@path@lastx=\dimen307
+\pgf@path@lasty=\dimen308
 ) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen274
-\pgf@shorten@start@additional=\dimen275
+\pgf@shorten@end@additional=\dimen309
+\pgf@shorten@start@additional=\dimen310
 ) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box104
-\pgf@hbox=\box105
-\pgf@layerbox@main=\box106
-\pgf@picture@serial@count=\count348
+\pgfpic=\box113
+\pgf@hbox=\box114
+\pgf@layerbox@main=\box115
+\pgf@picture@serial@count=\count362
 ) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen276
+\pgflinewidth=\dimen311
 ) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen277
-\pgf@pt@y=\dimen278
-\pgf@pt@temp=\dimen279
+\pgf@pt@x=\dimen312
+\pgf@pt@y=\dimen313
+\pgf@pt@temp=\dimen314
 ) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -493,17 +607,17 @@ File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen280
+\pgfarrowsep=\dimen315
 ) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen281
-\pgf@sys@shading@range@num=\count349
-\pgf@shadingcount=\count350
+\pgf@max=\dimen316
+\pgf@sys@shading@range@num=\count363
+\pgf@shadingcount=\count364
 ) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box107
+\pgfexternal@startupbox=\box116
 ) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (D:\PastaMiks\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
@@ -514,51 +628,51 @@ File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (D:\PastaMiks\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box108
+\pgfnodeparttextbox=\box117
 ) (D:\PastaMiks\tex/generic/pgf/modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (D:\PastaMiks\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen282
-\pgf@nodesepend=\dimen283
+\pgf@nodesepstart=\dimen317
+\pgf@nodesepend=\dimen318
 ) (D:\PastaMiks\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 )) (D:\PastaMiks\tex/latex/pgf/utilities\pgffor.sty (D:\PastaMiks\tex/latex/pgf/utilities\pgfkeys.sty (D:\PastaMiks\tex/generic/pgf/utilities\pgfkeys.code.tex)) (D:\PastaMiks\tex/latex/pgf/math\pgfmath.sty (D:\PastaMiks\tex/generic/pgf/math\pgfmath.code.tex)) (D:\PastaMiks\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen284
-\pgffor@skip=\dimen285
-\pgffor@stack=\toks35
-\pgffor@toks=\toks36
+\pgffor@iter=\dimen319
+\pgffor@skip=\dimen320
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
 )) (D:\PastaMiks\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
  (D:\PastaMiks\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count351
-\pgfplotmarksize=\dimen286
+\pgf@plot@mark@count=\count365
+\pgfplotmarksize=\dimen321
 )
-\tikz@lastx=\dimen287
-\tikz@lasty=\dimen288
-\tikz@lastxsaved=\dimen289
-\tikz@lastysaved=\dimen290
-\tikz@lastmovetox=\dimen291
-\tikz@lastmovetoy=\dimen292
-\tikzleveldistance=\dimen293
-\tikzsiblingdistance=\dimen294
-\tikz@figbox=\box109
-\tikz@figbox@bg=\box110
-\tikz@tempbox=\box111
-\tikz@tempbox@bg=\box112
-\tikztreelevel=\count352
-\tikznumberofchildren=\count353
-\tikznumberofcurrentchild=\count354
-\tikz@fig@count=\count355
+\tikz@lastx=\dimen322
+\tikz@lasty=\dimen323
+\tikz@lastxsaved=\dimen324
+\tikz@lastysaved=\dimen325
+\tikz@lastmovetox=\dimen326
+\tikz@lastmovetoy=\dimen327
+\tikzleveldistance=\dimen328
+\tikzsiblingdistance=\dimen329
+\tikz@figbox=\box118
+\tikz@figbox@bg=\box119
+\tikz@tempbox=\box120
+\tikz@tempbox@bg=\box121
+\tikztreelevel=\count366
+\tikznumberofchildren=\count367
+\tikznumberofcurrentchild=\count368
+\tikz@fig@count=\count369
  (D:\PastaMiks\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count356
-\pgfmatrixcurrentcolumn=\count357
-\pgf@matrix@numberofcolumns=\count358
+\pgfmatrixcurrentrow=\count370
+\pgfmatrixcurrentcolumn=\count371
+\pgf@matrix@numberofcolumns=\count372
 )
-\tikz@expandcount=\count359
+\tikz@expandcount=\count373
  (D:\PastaMiks\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (D:\PastaMiks\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
@@ -571,104 +685,74 @@ File: pgflibrarypatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: tikzlibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
  (D:\PastaMiks\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\arrowsize=\dimen295
+\arrowsize=\dimen330
 )) (D:\PastaMiks\tex/latex/pgfplots\pgfplots.sty (D:\PastaMiks\tex/generic/pgfplots\pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
  (D:\PastaMiks\tex/generic/pgfplots\pgfplots.code.tex (D:\PastaMiks\tex/generic/pgfplots\pgfplotscore.code.tex
-\t@pgfplots@toka=\toks37
-\t@pgfplots@tokb=\toks38
-\t@pgfplots@tokc=\toks39
-\pgfplots@tmpa=\dimen296
-\c@pgfplots@coordindex=\count360
-\c@pgfplots@scanlineindex=\count361
+\t@pgfplots@toka=\toks43
+\t@pgfplots@tokb=\toks44
+\t@pgfplots@tokc=\toks45
+\pgfplots@tmpa=\dimen331
+\c@pgfplots@coordindex=\count374
+\c@pgfplots@scanlineindex=\count375
  (D:\PastaMiks\tex/generic/pgfplots/sys\pgfplotssysgeneric.code.tex)) (D:\PastaMiks\tex/generic/pgfplots/libs\pgfplotslibrary.code.tex) (D:\PastaMiks\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_loader.code.tex (D:\PastaMiks\tex/generic/pgf/libraries\pgflibraryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
-\t@pgf@toka=\toks40
-\t@pgf@tokb=\toks41
-\t@pgf@tokc=\toks42
+\t@pgf@toka=\toks46
+\t@pgf@tokb=\toks47
+\t@pgf@tokc=\toks48
 (D:\PastaMiks\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (D:\PastaMiks\tex/generic/pgfplots/util\pgfplotsutil.code.tex (D:\PastaMiks\tex/generic/pgfplots/liststructure\pgfplotsliststructure.code.tex) (D:\PastaMiks\tex/generic/pgfplots/liststructure\pgfplotsliststructureext.code.tex) (D:\PastaMiks\tex/generic/pgfplots/liststructure\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count362
+\c@pgfplotsarray@tmp=\count376
 ) (D:\PastaMiks\tex/generic/pgfplots/liststructure\pgfplotsmatrix.code.tex) (D:\PastaMiks\tex/generic/pgfplots/numtable\pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count363
-\t@pgfplotstable@a=\toks43
+\c@pgfplotstable@counta=\count377
+\t@pgfplotstable@a=\toks49
 ) (D:\PastaMiks\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.tex) (D:\PastaMiks\tex/generic/pgfplots/util\pgfplotsbinary.code.tex (D:\PastaMiks\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex)) (D:\PastaMiks\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex) (D:\PastaMiks\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count364
+\c@pgfplotslibrarysurf@no=\count378
  (D:\PastaMiks\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (D:\PastaMiks\tex/generic/pgfplots/util\pgfplotscolormap.code.tex (D:\PastaMiks\tex/generic/pgfplots/util\pgfplotscolor.code.tex)) (D:\PastaMiks\tex/generic/pgfplots\pgfplotsstackedplots.code.tex) (D:\PastaMiks\tex/generic/pgfplots\pgfplotsplothandlers.code.tex (D:\PastaMiks\tex/generic/pgfplots\pgfplotsmeshplothandler.code.tex (D:\PastaMiks\tex/generic/pgfplots\pgfplotsmeshplotimage.code.tex))) (D:\PastaMiks\tex/generic/pgfplots\pgfplots.scaling.code.tex) (D:\PastaMiks\tex/generic/pgfplots\pgfplotscoordprocessing.code.tex) (D:\PastaMiks\tex/generic/pgfplots\pgfplots.errorbars.code.tex) (D:\PastaMiks\tex/generic/pgfplots\pgfplots.markers.code.tex) (D:\PastaMiks\tex/generic/pgfplots\pgfplotsticks.code.tex) (D:\PastaMiks\tex/generic/pgfplots\pgfplots.paths.code.tex) (D:\PastaMiks\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex (D:\PastaMiks\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen297
-\pgfdecoratedremainingdistance=\dimen298
-\pgfdecoratedinputsegmentcompleteddistance=\dimen299
-\pgfdecoratedinputsegmentremainingdistance=\dimen300
-\pgf@decorate@distancetomove=\dimen301
-\pgf@decorate@repeatstate=\count365
-\pgfdecorationsegmentamplitude=\dimen302
-\pgfdecorationsegmentlength=\dimen303
+\pgfdecoratedcompleteddistance=\dimen332
+\pgfdecoratedremainingdistance=\dimen333
+\pgfdecoratedinputsegmentcompleteddistance=\dimen334
+\pgfdecoratedinputsegmentremainingdistance=\dimen335
+\pgf@decorate@distancetomove=\dimen336
+\pgf@decorate@repeatstate=\count379
+\pgfdecorationsegmentamplitude=\dimen337
+\pgfdecorationsegmentlength=\dimen338
 )
-\tikz@lib@dec@box=\box113
+\tikz@lib@dec@box=\box122
 ) (D:\PastaMiks\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex (D:\PastaMiks\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathmorphing.code.tex)) (D:\PastaMiks\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex (D:\PastaMiks\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathreplacing.code.tex)) (D:\PastaMiks\tex/generic/pgfplots/libs\tikzlibrarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count366
-\pgfplots@xmin@reg=\dimen304
-\pgfplots@xmax@reg=\dimen305
-\pgfplots@ymin@reg=\dimen306
-\pgfplots@ymax@reg=\dimen307
-\pgfplots@zmin@reg=\dimen308
-\pgfplots@zmax@reg=\dimen309
+\pgfplots@numplots=\count380
+\pgfplots@xmin@reg=\dimen339
+\pgfplots@xmax@reg=\dimen340
+\pgfplots@ymin@reg=\dimen341
+\pgfplots@ymax@reg=\dimen342
+\pgfplots@zmin@reg=\dimen343
+\pgfplots@zmax@reg=\dimen344
 ) (D:\PastaMiks\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
  (D:\PastaMiks\tex/generic/pgf/libraries\pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (D:\PastaMiks\tex/generic/pgfplots/libs\tikzlibrarypgfplots.fillbetween.code.tex (D:\PastaMiks\tex/generic/pgfplots/pgfcontrib\tikzlibraryfillbetween.code.tex (D:\PastaMiks\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryintersections.code.tex (D:\PastaMiks\tex/generic/pgf/libraries\pgflibraryintersections.code.tex
-\pgf@intersect@solutions=\count367
+\pgf@intersect@solutions=\count381
 )) (D:\PastaMiks\tex/generic/pgfplots/pgfcontrib\tikzlibrarydecorations.softclip.code.tex (D:\PastaMiks\tex/generic/pgfplots/pgfcontrib\pgflibraryfillbetween.code.tex))) (D:\PastaMiks\tex/generic/pgfplots/libs\tikzlibrarypgfplots.decorations.softclip.code.tex)) (D:\PastaMiks\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
-\f@nch@headwidth=\skip61
-\f@nch@offset@elh=\skip62
-\f@nch@offset@erh=\skip63
-\f@nch@offset@olh=\skip64
-\f@nch@offset@orh=\skip65
-\f@nch@offset@elf=\skip66
-\f@nch@offset@erf=\skip67
-\f@nch@offset@olf=\skip68
-\f@nch@offset@orf=\skip69
-\f@nch@height=\skip70
-\f@nch@footalignment=\skip71
-\f@nch@widthL=\skip72
-\f@nch@widthC=\skip73
-\f@nch@widthR=\skip74
-\@temptokenb=\toks44
+\f@nch@headwidth=\skip79
+\f@nch@offset@elh=\skip80
+\f@nch@offset@erh=\skip81
+\f@nch@offset@olh=\skip82
+\f@nch@offset@orh=\skip83
+\f@nch@offset@elf=\skip84
+\f@nch@offset@erf=\skip85
+\f@nch@offset@olf=\skip86
+\f@nch@offset@orf=\skip87
+\f@nch@height=\skip88
+\f@nch@footalignment=\skip89
+\f@nch@widthL=\skip90
+\f@nch@widthC=\skip91
+\f@nch@widthR=\skip92
+\@temptokenb=\toks50
 ) (D:\PastaMiks\tex/latex/fundus-calligra\calligra.sty
 Package: calligra 2012/04/10 v1.9 LaTeX package calligra
-) (D:\PastaMiks\tex/latex/abntex2\abntex2cite.sty
-Package: abntex2cite 2018/11/24 v-1.9.7 abnTeX2
- (D:\PastaMiks\tex/latex/base\ifthen.sty
-Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-) (D:\PastaMiks\tex/latex/tools\calc.sty
-Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count368
-\calc@Bcount=\count369
-\calc@Adimen=\dimen310
-\calc@Bdimen=\dimen311
-\calc@Askip=\skip75
-\calc@Bskip=\skip76
-LaTeX Info: Redefining \setlength on input line 86.
-LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count370
-\calc@Cskip=\skip77
-) (D:\PastaMiks\tex/latex/abntex2\abntex2abrev.sty)
-\minimumbiblabelwidth=\skip78
-\ABCIauxlen=\skip79
-\c@ABCIaux=\count371
-\c@ABCImax=\count372
- (D:\PastaMiks\tex/generic/iftex\ifpdf.sty
-Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
-) (D:\PastaMiks\tex/generic/iftex\ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-) (D:\PastaMiks\tex/latex/relsize\relsize.sty
-Package: relsize 2013/03/29 ver 4.1
-)
-\biblabelsep=\skip80
-LaTeX Info: Redefining \newblock on input line 591.
-LaTeX Info: Redefining \cite on input line 618.
-\ABCItoken=\toks45
+) (D:\PastaMiks\tex/latex/psnfss\helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 ) (D:\PastaMiks\tex/latex/psnfss\pifont.sty
 Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
 LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
@@ -678,9 +762,96 @@ File: upzd.fd 2001/06/04 font definitions for U/pzd.
 LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
  (D:\PastaMiks\tex/latex/psnfss\upsy.fd
 File: upsy.fd 2001/06/04 font definitions for U/psy.
-)) (D:\PastaMiks\tex/latex/amsfonts\amsfonts.sty
+)) (D:\PastaMiks\tex/latex/datetime\datetime.sty
+Package: datetime 2015/03/20 v2.60 Date Time Package
+ (D:\PastaMiks\tex/latex/fmtcount\fmtcount.sty
+Package: fmtcount 2025/12/02 v3.12 Displaying the values of LaTeX counters (NT,VB,NE)
+ (D:\PastaMiks\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (D:\PastaMiks\tex/latex/fmtcount\fcprefix.sty
+Package: fcprefix 2012/09/28
+ (D:\PastaMiks\tex/latex/fmtcount\fcnumparser.sty
+Package: fcnumparser 2017/06/15
+\fc@digit@counter=\count382
+)) (D:\PastaMiks\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks51
+\ex@=\dimen345
+)
+\c@padzeroesN=\count383
+\fc@tmpcatcode=\count384
+ (D:\PastaMiks\tex/latex/fmtcount\fc-portuges.def
+File: fc-portuges.def 2017/12/26
+)
+\@DT@modctr=\count385
+\@ordinalctr=\count386
+\@orgargctr=\count387
+\@strctr=\count388
+\@tmpstrctr=\count389
+\@DT@loopN=\count390
+\@DT@X=\count391
+) (D:\PastaMiks\tex/latex/datetime\datetime-defaults.sty
+Package: datetime-defaults 2013/09/10
+)
+\@day=\count392
+\@month=\count393
+\@year=\count394
+\c@HOUR=\count395
+\c@HOURXII=\count396
+\c@MINUTE=\count397
+\c@TOHOUR=\count398
+\c@TOMINUTE=\count399
+\c@SECOND=\count400
+\currenthour=\count401
+\currentminute=\count402
+\currentsecond=\count403
+Package datetime Info: No datetime.cfg file found, using default settings on input line 308.
+\@dtctr=\count404
+\dayofyear=\count405
+\dayofweek=\count406
+LaTeX Info: Redefining \today on input line 736.
+\dt@a=\toks52
+\dt@b=\toks53
+) (D:\PastaMiks\tex/latex/lastpage\lastpage.sty
+Package: lastpage 2025/08/14 v2.1h lastpage: 2.09 or 2e? (HMM)
+ (D:\PastaMiks\tex/latex/lastpage\lastpage2e.sty
+Package: lastpage2e 2025/08/14 v2.1h Decide which 2e lastpage version to use (HMM)
+ (D:\PastaMiks\tex/latex/lastpage\lastpagemodern.sty
+Package: lastpagemodern 2025-08-14 v2.1h Refers to last page's name (HMM; JPG)
+\c@lastpagecount=\count407
+) 
+)) (D:\PastaMiks\tex/latex/abntex2\abntex2cite.sty
+Package: abntex2cite 2018/11/24 v-1.9.7 abnTeX2
+ (D:\PastaMiks\tex/latex/tools\calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count408
+\calc@Bcount=\count409
+\calc@Adimen=\dimen346
+\calc@Bdimen=\dimen347
+\calc@Askip=\skip93
+\calc@Bskip=\skip94
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count410
+\calc@Cskip=\skip95
+) (D:\PastaMiks\tex/latex/abntex2\abntex2abrev.sty)
+\minimumbiblabelwidth=\skip96
+\ABCIauxlen=\skip97
+\c@ABCIaux=\count411
+\c@ABCImax=\count412
+ (D:\PastaMiks\tex/generic/iftex\ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+) (D:\PastaMiks\tex/generic/iftex\ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (D:\PastaMiks\tex/latex/relsize\relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\biblabelsep=\skip98
+LaTeX Info: Redefining \newblock on input line 591.
+LaTeX Info: Redefining \cite on input line 618.
+\ABCItoken=\toks54
+) (D:\PastaMiks\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks46
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
@@ -690,77 +861,73 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 ) (D:\PastaMiks\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks47
-\thm@bodyfont=\toks48
-\thm@headfont=\toks49
-\thm@notefont=\toks50
-\thm@headpunct=\toks51
-\thm@preskip=\skip81
-\thm@postskip=\skip82
-\thm@headsep=\skip83
-\dth@everypar=\toks52
+\thm@style=\toks55
+\thm@bodyfont=\toks56
+\thm@headfont=\toks57
+\thm@notefont=\toks58
+\thm@headpunct=\toks59
+\thm@preskip=\skip99
+\thm@postskip=\skip100
+\thm@headsep=\skip101
+\dth@everypar=\toks60
 ) (D:\PastaMiks\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
-\@mathmargin=\skip84
+\@mathmargin=\skip102
 
 For additional information on amsmath, use the `?' option.
 (D:\PastaMiks\tex/latex/amsmath\amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
- (D:\PastaMiks\tex/latex/amsmath\amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks53
-\ex@=\dimen312
-)) (D:\PastaMiks\tex/latex/amsmath\amsbsy.sty
+) (D:\PastaMiks\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen313
+\pmbraise@=\dimen348
 ) (D:\PastaMiks\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count373
+\inf@bad=\count413
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count374
-\leftroot@=\count375
+\uproot@=\count414
+\leftroot@=\count415
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count376
-\DOTSCASE@=\count377
+\classnum@=\count416
+\DOTSCASE@=\count417
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box114
-\strutbox@=\box115
+\Mathstrutbox@=\box123
+\strutbox@=\box124
 LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen314
+\big@size=\dimen349
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count378
+\macc@depth=\count418
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count379
+\c@MaxMatrixCols=\count419
 \dotsspace@=\muskip18
-\c@parentequation=\count380
-\dspbrk@lvl=\count381
-\tag@help=\toks54
-\row@=\count382
-\column@=\count383
-\maxfields@=\count384
-\andhelp@=\toks55
-\eqnshift@=\dimen315
-\alignsep@=\dimen316
-\tagshift@=\dimen317
-\tagwidth@=\dimen318
-\totwidth@=\dimen319
-\lineht@=\dimen320
-\@envbody=\toks56
-\multlinegap=\skip85
-\multlinetaggap=\skip86
-\mathdisplay@stack=\toks57
+\c@parentequation=\count420
+\dspbrk@lvl=\count421
+\tag@help=\toks61
+\row@=\count422
+\column@=\count423
+\maxfields@=\count424
+\andhelp@=\toks62
+\eqnshift@=\dimen350
+\alignsep@=\dimen351
+\tagshift@=\dimen352
+\tagwidth@=\dimen353
+\totwidth@=\dimen354
+\lineht@=\dimen355
+\@envbody=\toks63
+\multlinegap=\skip103
+\multlinetaggap=\skip104
+\mathdisplay@stack=\toks64
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 ) (D:\PastaMiks\tex/latex/doublestroke\dsfont.sty
@@ -770,168 +937,37 @@ Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
  (D:\PastaMiks\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count385
-\l_MT_multwidth_dim=\dimen321
-\origjot=\skip87
-\l_MT_shortvdotswithinadjustabove_dim=\dimen322
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen323
-\l_MT_above_intertext_sep=\dimen324
-\l_MT_below_intertext_sep=\dimen325
-\l_MT_above_shortintertext_sep=\dimen326
-\l_MT_below_shortintertext_sep=\dimen327
-\xmathstrut@box=\box116
-\xmathstrut@dim=\dimen328
-) (D:\PastaMiks\tex/latex/psnfss\helvet.sty
-Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
-) (D:\PastaMiks\tex/latex/lastpage\lastpage.sty
-Package: lastpage 2025/08/14 v2.1h lastpage: 2.09 or 2e? (HMM)
- (D:\PastaMiks\tex/latex/lastpage\lastpage2e.sty
-Package: lastpage2e 2025/08/14 v2.1h Decide which 2e lastpage version to use (HMM)
- (D:\PastaMiks\tex/latex/lastpage\lastpagemodern.sty
-Package: lastpagemodern 2025-08-14 v2.1h Refers to last page's name (HMM; JPG)
-\c@lastpagecount=\count386
-) 
-)) (D:\PastaMiks\tex/latex/adjustbox\adjustbox.sty
-Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
- (D:\PastaMiks\tex/latex/xkeyval\xkeyval.sty
-Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
- (D:\PastaMiks\tex/generic/xkeyval\xkeyval.tex (D:\PastaMiks\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks58
-\XKV@tempa@toks=\toks59
-)
-\XKV@depth=\count387
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (D:\PastaMiks\tex/latex/adjustbox\adjcalc.sty
-Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
-) (D:\PastaMiks\tex/latex/adjustbox\trimclip.sty
-Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
- (D:\PastaMiks\tex/latex/collectbox\collectbox.sty
-Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box117
-)
-\tc@llx=\dimen329
-\tc@lly=\dimen330
-\tc@urx=\dimen331
-\tc@ury=\dimen332
-Package trimclip Info: Using driver 'tc-pdftex.def'.
- (D:\PastaMiks\tex/latex/adjustbox\tc-pdftex.def
-File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
-))
-\adjbox@Width=\dimen333
-\adjbox@Height=\dimen334
-\adjbox@Depth=\dimen335
-\adjbox@Totalheight=\dimen336
-\adjbox@pwidth=\dimen337
-\adjbox@pheight=\dimen338
-\adjbox@pdepth=\dimen339
-\adjbox@ptotalheight=\dimen340
- (D:\PastaMiks\tex/latex/ifoddpage\ifoddpage.sty
-Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count388
-) (D:\PastaMiks\tex/latex/varwidth\varwidth.sty
-Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box118
-\sift@deathcycles=\count389
-\@vwid@loff=\dimen341
-\@vwid@roff=\dimen342
-)
-==> First Aid for varwidth.sty applied!
-) (D:\PastaMiks\tex/latex/tools\tabularx.sty
-Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
-\TX@col@width=\dimen343
-\TX@old@table=\dimen344
-\TX@old@col=\dimen345
-\TX@target=\dimen346
-\TX@delta=\dimen347
-\TX@cols=\count390
-\TX@ftn=\toks60
-) (D:\PastaMiks\tex/latex/float\float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count391
-\float@exts=\toks61
-\float@box=\box119
-\@float@everytoks=\toks62
-\@floatcapt=\box120
-) (D:\PastaMiks\tex/latex/datetime\datetime.sty
-Package: datetime 2015/03/20 v2.60 Date Time Package
- (D:\PastaMiks\tex/latex/fmtcount\fmtcount.sty
-Package: fmtcount 2025/12/02 v3.12 Displaying the values of LaTeX counters (NT,VB,NE)
- (D:\PastaMiks\tex/latex/fmtcount\fcprefix.sty
-Package: fcprefix 2012/09/28
- (D:\PastaMiks\tex/latex/fmtcount\fcnumparser.sty
-Package: fcnumparser 2017/06/15
-\fc@digit@counter=\count392
-))
-\c@padzeroesN=\count393
-\fc@tmpcatcode=\count394
- (D:\PastaMiks\tex/latex/fmtcount\fc-portuges.def
-File: fc-portuges.def 2017/12/26
-)
-\@DT@modctr=\count395
-\@ordinalctr=\count396
-\@orgargctr=\count397
-\@strctr=\count398
-\@tmpstrctr=\count399
-\@DT@loopN=\count400
-\@DT@X=\count401
-) (D:\PastaMiks\tex/latex/datetime\datetime-defaults.sty
-Package: datetime-defaults 2013/09/10
-)
-\@day=\count402
-\@month=\count403
-\@year=\count404
-\c@HOUR=\count405
-\c@HOURXII=\count406
-\c@MINUTE=\count407
-\c@TOHOUR=\count408
-\c@TOMINUTE=\count409
-\c@SECOND=\count410
-\currenthour=\count411
-\currentminute=\count412
-\currentsecond=\count413
-Package datetime Info: No datetime.cfg file found, using default settings on input line 308.
-\@dtctr=\count414
-\dayofyear=\count415
-\dayofweek=\count416
-LaTeX Info: Redefining \today on input line 736.
-\dt@a=\toks63
-\dt@b=\toks64
-) (D:\PastaMiks\tex/latex/ragged2e\ragged2e.sty
-Package: ragged2e 2023/06/22 v3.6 ragged2e Package
-\CenteringLeftskip=\skip88
-\RaggedLeftLeftskip=\skip89
-\RaggedRightLeftskip=\skip90
-\CenteringRightskip=\skip91
-\RaggedLeftRightskip=\skip92
-\RaggedRightRightskip=\skip93
-\CenteringParfillskip=\skip94
-\RaggedLeftParfillskip=\skip95
-\RaggedRightParfillskip=\skip96
-\JustifyingParfillskip=\skip97
-\CenteringParindent=\skip98
-\RaggedLeftParindent=\skip99
-\RaggedRightParindent=\skip100
-\JustifyingParindent=\skip101
+\g_MT_multlinerow_int=\count425
+\l_MT_multwidth_dim=\dimen356
+\origjot=\skip105
+\l_MT_shortvdotswithinadjustabove_dim=\dimen357
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen358
+\l_MT_above_intertext_sep=\dimen359
+\l_MT_below_intertext_sep=\dimen360
+\l_MT_above_shortintertext_sep=\dimen361
+\l_MT_below_shortintertext_sep=\dimen362
+\xmathstrut@box=\box125
+\xmathstrut@dim=\dimen363
 ) (D:\PastaMiks\tex/latex/listings\listings.sty
-\lst@mode=\count417
-\lst@gtempboxa=\box121
+\lst@mode=\count426
+\lst@gtempboxa=\box126
 \lst@token=\toks65
-\lst@length=\count418
-\lst@currlwidth=\dimen348
-\lst@column=\count419
-\lst@pos=\count420
-\lst@lostspace=\dimen349
-\lst@width=\dimen350
-\lst@newlines=\count421
-\lst@lineno=\count422
-\lst@maxwidth=\dimen351
+\lst@length=\count427
+\lst@currlwidth=\dimen364
+\lst@column=\count428
+\lst@pos=\count429
+\lst@lostspace=\dimen365
+\lst@width=\dimen366
+\lst@newlines=\count430
+\lst@lineno=\count431
+\lst@maxwidth=\dimen367
  (D:\PastaMiks\tex/latex/listings\lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
 ) (D:\PastaMiks\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count423
-\lst@skipnumbers=\count424
-\lst@framebox=\box122
+\c@lstnumber=\count432
+\lst@skipnumbers=\count433
+\lst@framebox=\box127
 ) (D:\PastaMiks\tex/latex/listings\listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
 ))
@@ -943,36 +979,17 @@ Package: listings 2025/11/14 1.11b (Carsten Heinz)
     but found:
         2025/11/14 1.11b (Carsten Heinz)
     so I'm assuming it got fixed.
-\c@rfreq=\count425
-\c@nfreq=\count426
 (D:\PastaMiks\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip102
-\enit@outerparindent=\dimen352
+\labelindent=\skip106
+\enit@outerparindent=\dimen368
 \enit@toks=\toks66
-\enit@inbox=\box123
-\enit@count@id=\count427
-\enitdp@description=\count428
-) (D:\PastaMiks\tex/latex/tools\longtable.sty
-Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
-\LTleft=\skip103
-\LTright=\skip104
-\LTpre=\skip105
-\LTpost=\skip106
-\LTchunksize=\count429
-\LTcapwidth=\dimen353
-\LT@head=\box124
-\LT@firsthead=\box125
-\LT@foot=\box126
-\LT@lastfoot=\box127
-\LT@gbox=\box128
-\LT@cols=\count430
-\LT@rows=\count431
-\c@LT@tables=\count432
-\c@LT@chunks=\count433
-\LT@p@ftn=\toks67
-)) (D:\PastaMiks\tex/latex/mwe\mwe.sty
-Package: mwe 2018/03/30 v0.5 Package to support minimal working examples (MWE)
+\enit@inbox=\box128
+\enit@count@id=\count434
+\enitdp@description=\count435
+)
+\c@rfreq=\count436
+\c@nfreq=\count437
 ) (main.aux
 Package babel Info: 'brazilian' activates 'portuges' shorthands.
 (babel)             Reported on input line 13.
@@ -999,17 +1016,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
  (D:\PastaMiks\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count434
-\scratchdimen=\dimen354
+\scratchcounter=\count438
+\scratchdimen=\dimen369
 \scratchbox=\box129
-\nofMPsegments=\count435
-\nofMParguments=\count436
-\everyMPshowfont=\toks68
-\MPscratchCnt=\count437
-\MPscratchDim=\dimen355
-\MPnumerator=\count438
-\makeMPintoPDFobject=\count439
-\everyMPtoPDFconversion=\toks69
+\nofMPsegments=\count439
+\nofMParguments=\count440
+\everyMPshowfont=\toks67
+\MPscratchCnt=\count441
+\MPscratchDim=\dimen370
+\MPnumerator=\count442
+\makeMPintoPDFobject=\count443
+\everyMPtoPDFconversion=\toks68
 ) (D:\PastaMiks\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1068,115 +1085,154 @@ Package hyperref Info: Link coloring OFF on input line 9.
 
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
 
-\c@lstlisting=\count440
+\c@lstlisting=\count444
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 10.
 (D:\PastaMiks\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) (capa.tex
-<img_arquivo/Brjr.png, id=90, 442.65375pt x 245.91875pt>
+<img_arquivo/Brjr.png, id=234, 442.65375pt x 245.91875pt>
 File: img_arquivo/Brjr.png Graphic file (type png)
 <use img_arquivo/Brjr.png>
 Package pdftex.def Info: img_arquivo/Brjr.png  used on input line 21.
 (pdftex.def)             Requested size: 137.42426pt x 76.34659pt.
-<img_arquivo/UnB.pdf, id=91, 52.195pt x 47.17625pt>
+<img_arquivo/UnB.pdf, id=235, 52.195pt x 47.17625pt>
 File: img_arquivo/UnB.pdf Graphic file (type pdf)
 <use img_arquivo/UnB.pdf>
 Package pdftex.def Info: img_arquivo/UnB.pdf  used on input line 25.
 (pdftex.def)             Requested size: 71.69801pt x 64.81244pt.
-<img_arquivo/Concentro.png, id=92, 284.06125pt x 144.54pt>
+<img_arquivo/Concentro.png, id=236, 284.06125pt x 144.54pt>
 File: img_arquivo/Concentro.png Graphic file (type png)
 <use img_arquivo/Concentro.png>
 Package pdftex.def Info: img_arquivo/Concentro.png  used on input line 29.
 (pdftex.def)             Requested size: 137.42426pt x 69.92757pt.
  (D:\PastaMiks\tex/latex/amsfonts\umsa.fd) (D:\PastaMiks\tex/latex/amsfonts\umsb.fd)
-<img_arquivo/capaEJ.png, id=94, 597.73312pt x 845.40843pt>
+<img_arquivo/capaEJ.png, id=238, 597.73312pt x 845.40843pt>
 File: img_arquivo/capaEJ.png Graphic file (type png)
 <use img_arquivo/capaEJ.png>
 Package pdftex.def Info: img_arquivo/capaEJ.png  used on input line 48.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
  [1
 
-{C:/Users/Arthur/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{D:/PastaMiks/fonts/enc/dvips/base/8r.enc} <./img_arquivo/capaEJ.png> <./img_arquivo/Brjr.png> <./img_arquivo/UnB.pdf> <./img_arquivo/Concentro.png>]) (main.toc)
+{C:/Users/Arthur/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{D:/PastaMiks/fonts/enc/dvips/base/8r.enc} <./img_arquivo/capaEJ.png> <./img_arquivo/Brjr.png> <./img_arquivo/UnB.pdf> <./img_arquivo/Concentro.png>]) (main.toc
+Package babel Info: 'brazilian' activates 'portuges' shorthands.
+(babel)             Reported on input line 37.
+<img_arquivo/fundo_default.png, id=289, 597.73312pt x 845.40843pt>
+File: img_arquivo/fundo_default.png Graphic file (type png)
+<use img_arquivo/fundo_default.png>
+Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 37.
+(pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
+ [1 <./img_arquivo/fundo_default.png>])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-<img_arquivo/fundo_default.png, id=131, 597.73312pt x 845.40843pt>
 File: img_arquivo/fundo_default.png Graphic file (type png)
 <use img_arquivo/fundo_default.png>
 Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 15.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
- [1 <./img_arquivo/fundo_default.png>] (Seções/Introducao.tex)
+ [2] (Seções/Introducao.tex)
 File: img_arquivo/fundo_default.png Graphic file (type png)
 <use img_arquivo/fundo_default.png>
 Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 19.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
- [2] (Seções/Analise de Requisitos.tex
+ [3] (Seções/Analise de Requisitos.tex
 File: img_arquivo/fundo_default.png Graphic file (type png)
 <use img_arquivo/fundo_default.png>
 Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 38.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
- [3]
+ [4]
 File: img_arquivo/fundo_default.png Graphic file (type png)
 <use img_arquivo/fundo_default.png>
-Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 52.
+Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 88.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
- [4])
+ [5]
+File: img_arquivo/fundo_default.png Graphic file (type png)
+<use img_arquivo/fundo_default.png>
+Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 132.
+(pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
+ [6]
+File: img_arquivo/fundo_default.png Graphic file (type png)
+<use img_arquivo/fundo_default.png>
+Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 187.
+(pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
+ [7])
 File: img_arquivo/fundo_default.png Graphic file (type png)
 <use img_arquivo/fundo_default.png>
 Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 23.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
- [5] (Seções/Diagrama de Blocos.tex)
+ [8] (Seções/Fluxograma de software.tex
+<img_arquivo/FluxoSoft.png.jpeg, id=381, 5750.48375pt x 8584.07pt>
+File: img_arquivo/FluxoSoft.png.jpeg Graphic file (type jpg)
+<use img_arquivo/FluxoSoft.png.jpeg>
+Package pdftex.def Info: img_arquivo/FluxoSoft.png.jpeg  used on input line 4.
+(pdftex.def)             Requested size: 375.57782pt x 560.60379pt.
+)
+Overfull \hbox (20.91708pt too wide) in paragraph at lines 9--27
+[]\T1/phv/m/n/10.95 Com o in-tuito de nor-tear a exe-cu-��o das ta-re-fas e ga-ran-tir a efi-ci-�n-cia dos pro-ces-sos, desenvolveu-
+ []
+
 File: img_arquivo/fundo_default.png Graphic file (type png)
 <use img_arquivo/fundo_default.png>
 Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 27.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
- [6] (Seções/Modelagem de Circuito.tex)
+[9 <./img_arquivo/FluxoSoft.png.jpeg>] (Seções/Diagrama de Blocos.tex)
 File: img_arquivo/fundo_default.png Graphic file (type png)
 <use img_arquivo/fundo_default.png>
-Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 31.
+Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 32.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
- [7] (Seções/Descricao de Hardware.tex)
+ [10] (Seções/Modelagem de Circuito.tex)
 File: img_arquivo/fundo_default.png Graphic file (type png)
 <use img_arquivo/fundo_default.png>
-Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 35.
+Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 36.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
- [8] (Seções/Descricao de Alto nivel.tex)
+ [11] (Seções/Descricao de Hardware.tex
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 19.
 File: img_arquivo/fundo_default.png Graphic file (type png)
 <use img_arquivo/fundo_default.png>
-Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 39.
+Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 38.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
- [9] (Seções/Descricao de Firmware.tex)
+ [12])
 File: img_arquivo/fundo_default.png Graphic file (type png)
 <use img_arquivo/fundo_default.png>
-Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 43.
+Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 40.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
- [10] (Seções/BOM.tex)
+ [13] (Seções/Descricao de Alto nivel.tex)
 File: img_arquivo/fundo_default.png Graphic file (type png)
 <use img_arquivo/fundo_default.png>
-Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 47.
+Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 44.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
- [11] 
+ [14] (Seções/Descricao de Firmware.tex)
+File: img_arquivo/fundo_default.png Graphic file (type png)
+<use img_arquivo/fundo_default.png>
+Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 48.
+(pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
+ [15] (Seções/BOM.tex)
+File: img_arquivo/fundo_default.png Graphic file (type png)
+<use img_arquivo/fundo_default.png>
+Package pdftex.def Info: img_arquivo/fundo_default.png  used on input line 52.
+(pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
+ [16] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (main.aux)
  ***********
 LaTeX2e <2025-11-01>
-L3 programming layer <2025-12-24>
+L3 programming layer <2026-03-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D124982157C1C8943BC2119EC46BD795;3580.
+(rerunfilecheck)             Checksum: 1F71468D642E7A4D1938400DF1DC5BE8;13433.
  ) 
 Here is how much of TeX's memory you used:
- 41922 strings out of 467870
- 923044 string characters out of 5433744
- 1553503 words of memory out of 5000000
- 69967 multiletter control sequences out of 15000+600000
- 664487 words of font info for 82 fonts, out of 8000000 for 9000
+ 42160 strings out of 467690
+ 929426 string characters out of 5430355
+ 1564227 words of memory out of 5000000
+ 70304 multiletter control sequences out of 15000+600000
+ 670535 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,12n,97p,1100b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Arthur\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk><D:/PastaMiks/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/PastaMiks/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on main.pdf (12 pages, 250945 bytes).
+ 93i,12n,98p,1108b,709s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Arthur\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\Arthur\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Arthur\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Arthur\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Arthur\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1095.pk><D:/PastaMiks/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/PastaMiks/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/PastaMiks/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/PastaMiks/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/PastaMiks/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/PastaMiks/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/PastaMiks/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (17 pages, 2293159 bytes).
 PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 625 PDF objects out of 1000 (max. 8388607)
+ 112 named destinations out of 1000 (max. 500000)
+ 499 words of extra memory for PDF output out of 10000 (max. 10000000)
 
