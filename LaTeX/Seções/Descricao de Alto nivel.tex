@@ -1,0 +1,24 @@
+\subsection{Subsistema de Alimentação e Regulação}
+Este subsistema gerencia a conversão e distribuição de energia para garantir que cada componente opere dentro de sua faixa de tensão nominal, prevenindo danos ao hardware.
+
+\begin{itemize}
+    \item \textbf{Entrada de Energia}: O sistema recebe alimentação de 5V via porta Micro-USB, conectada diretamente ao computador ou fonte externa.
+    \item \textbf{Regulação de Tensão (LDO)}: A placa DevKit utiliza um regulador de baixa queda (\textit{Low-Dropout} - LDO) para converter os 5V da entrada em 3,3V estáveis, necessários para o funcionamento do chip ESP32 e do sensor AHT20.
+    \item \textbf{Barramento de 5V}: Este barramento alimenta o módulo de cartão SD, que por sua vez possui regulação própria e \textit{level shifters} internos para garantir a integridade dos sinais lógicos.
+\end{itemize}
+
+\subsection{Subsistema de Sensoriamento e Armazenamento}
+Responsável por ler as informações do ambiente e salvá-las fisicamente.
+
+\begin{itemize}
+    \item \textbf{Sensor}: O AHT20 mede temperatura e umidade usando o protocolo I2C.
+    \item \textbf{Gravação}: As leituras são salvas no cartão SD em arquivos \texttt{.csv} via protocolo SPI, garantindo que os dados fiquem guardados mesmo sem internet.
+\end{itemize}
+
+\subsection{Subsistema de Interface e Atuação}
+Proporciona ao usuário uma visualização imediata do status operacional do dispositivo através de sinalizações luminosas.
+
+\begin{itemize}
+    \item \textbf{Sinalização Visual}: Três LEDs (Verde, Amarelo e Vermelho) compõem a interface física, permitindo identificar visualmente os estados de operação do hardware, como inicialização, execução ou falha.
+    \item \textbf{Proteção Física}: Resistores limitadores de corrente são empregados em série com os LEDs, protegendo as saídas digitais do microcontrolador contra drenagem excessiva de corrente.
+\end{itemize}
