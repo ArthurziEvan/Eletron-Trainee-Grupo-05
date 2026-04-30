@@ -1,4 +1,67 @@
-Nesta seção é mostrada a Descrição do Hardware, que são listados os principais componentes que compõem as principais soluções levantadas para o desenvolvimento do projeto. Eles são selecionados com base nas funcionalidades descritas e acordadas com o cliente na etapa de definição de requisitos. 
-\subsection{Arquitetura Geral}
+% Caso ainda não tenham colocado os pacotes abaizo, eles serão necessários
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+%\usepackage[margin=2.5cm]{geometry}
+%\usepackage{enumitem} 
+%\usepackage{booktabs} 
 
-O sistema é composto por...
+%\renewcommand{\baselinestretch}{1.15}
+
+Nesta seção é mostrada a Descrição do Hardware, que são listados os principais componentes que compõem as principais soluções levantadas para o desenvolvimento do projeto. Eles são selecionados com base nas funcionalidades descritas e acordadas com o cliente na etapa de definição de requisitos. 
+
+\subsection{Arquitetura Geral}
+O hardware do projeto foi projetado para operar de forma autônoma e centralizada. O sistema baseia-se em um microcontrolador com conectividade Wi-Fi nativa, que atua simultaneamente como gerenciador de aquisição de dados ambientais, controlador de atuadores visuais (LEDs) e hospedeiro do servidor web local. A comunicação entre os módulos periféricos foi distribuída utilizando barramentos padronizados (I2C e SPI) para garantir estabilidade e economia de portas lógicas (GPIOs).
+
+\subsection{Componentes e Justificativas Técnicas}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Microcontrolador: ESP32 DevKitC V4 (WROOM-32D)}
+    \begin{itemize}
+        \item \textit{Especificações:} Processador Dual Core de 32-bits, Wi-Fi 802.11 b/g/n, operação em 3,3V.
+        \item \textit{Justificativa:} Escolhido por sua capacidade de processamento multitarefa. O uso de núcleos separados permite manter o servidor web local operando de forma estável, sem interromper as rotinas de leitura de sensores e gravação de logs.
+    \end{itemize}
+
+    \item \textbf{Sensor de Temperatura e Umidade: Módulo AHT20}
+    \begin{itemize}
+        \item \textit{Especificações:} Protocolo I2C, precisão de $\pm 0.3$ $^\circ$C (Temp) e $\pm 2\%$ (Umid), calibração interna de fábrica.
+        \item \textit{Justificativa:} Superior em estabilidade aos sensores da família DHT. O uso do barramento I2C minimiza o uso de pinos do microcontrolador e evita erros de temporização comuns em protocolos \textit{single-wire}.
+    \end{itemize}
+
+    \item \textbf{Módulo de Armazenamento (Log Local): Leitor Micro SD Padrão}
+    \begin{itemize}
+        \item \textit{Especificações:} Comunicação SPI, regulador de tensão integrado (5V para 3,3V) e chip \textit{Level Shifter}.
+        \item \textit{Justificativa:} O modelo padrão protege o cartão SD e o ESP32 contra picos de tensão. É responsável por gravar as leituras em formato \texttt{.csv/.txt}, garantindo a persistência dos dados em caso de falha de conexão.
+    \end{itemize}
+
+    \item \textbf{Interface Visual: LEDs}
+    \begin{itemize}
+        \item \textit{Justificativa:} Indicam os estados de operação (Ligado, Automático, Desligado). Foram dimensionados em série com resistores de $220\,\Omega$, mantendo o consumo individual em cerca de 6mA e protegendo as portas lógicas do ESP32 contra sobrecorrente.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Dimensionamento e Alimentação}
+O circuito foi projetado para ser alimentado diretamente pela porta USB de um notebook (5V) conectada à entrada Micro-USB do ESP32. O microcontrolador utiliza seu regulador interno (LDO) para converter e distribuir 3,3V de forma segura para os sensores e o cartão SD. O consumo total estimado em pleno funcionamento (Wi-Fi ativo, módulo SD escrevendo e LEDs acesos) não ultrapassa 350mA. Esse valor é perfeitamente suportado pelo limite padrão de 500mA de uma porta USB 2.0 convencional, dispensando o uso de fontes externas durante o desenvolvimento e a apresentação.
+
+\subsection{Estrutura Física e Montagem}
+Para atender aos requisitos de robustez do projeto, o circuito final não utilizará protoboard. Todos os componentes serão organizados e soldados em uma placa perfurada ilhada ($5\times7$ cm). O microcontrolador será fixado por meio de barras de pinos fêmea, permitindo sua remoção para manutenção sem a necessidade de dessoldagem.
+
+\subsection{Mapa de Conexões (Pinagem Validada)}
+A distribuição das portas foi estruturada consultando o \textit{datasheet} oficial do ESP32 DevKitC V4. Foram rigorosamente evitados pinos classificados como \textit{Input Only} ou \textit{Strapping Pins} (que afetam o boot do sistema) para os atuadores.
+
+\begin{table}[h]
+\centering
+\caption{Mapeamento Definitivo de Pinagem do Sistema}
+\vspace{0.2cm}
+\begin{tabular}{@{}llc@{}}
+\toprule
+\textbf{Componente} & \textbf{Função / Protocolo} & \textbf{Pino do ESP32} \\ \midrule
+Sensor AHT20        & I2C (SDA)                   & GPIO 21                \\
+Sensor AHT20        & I2C (SCL)                   & GPIO 22                \\ \addlinespace
+Módulo SD           & SPI (CS / SS)               & GPIO 5                 \\
+Módulo SD           & SPI (MOSI)                  & GPIO 23                \\
+Módulo SD           & SPI (MISO)                  & GPIO 19                \\
+Módulo SD           & SPI (SCK)                   & GPIO 18                \\ \addlinespace
+LED Verde           & Saída Digital (Ligado)      & GPIO 27                \\
+LED Amarelo         & Saída Digital (Automático)  & GPIO 26                \\
+LED Vermelho        & Saída Digital (Desligado)   & GPIO 25                \\ \bottomrule
+\end{tabular}
+\end{table}
