@@ -523,7 +523,6 @@ INPUT D:\PastaMiks\tex\latex\amsfonts\umsb.fd
 INPUT D:\PastaMiks\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT D:\PastaMiks\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT D:\PastaMiks\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT D:\PastaMiks\fonts\tfm\jknappen\ec\ecsl1095.tfm
 INPUT D:\PastaMiks\fonts\tfm\jknappen\ec\ecrm0900.tfm
 INPUT D:\PastaMiks\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT D:\PastaMiks\fonts\tfm\adobe\helvetic\phvb8t.tfm
@@ -550,22 +549,18 @@ INPUT D:\PastaMiks\fonts\tfm\adobe\helvetic\phvb8t.tfm
 INPUT .\main.toc
 INPUT .\main.toc
 INPUT main.toc
-INPUT .\img_arquivo\fundo_default.png
-INPUT .\img_arquivo\fundo_default.png
-INPUT .\img_arquivo\fundo_default.png
-INPUT .\img_arquivo\fundo_default.png
-INPUT .\img_arquivo\fundo_default.png
-INPUT .\img_arquivo\fundo_default.png
-INPUT .\img_arquivo\fundo_default.png
-INPUT D:\PastaMiks\fonts\vf\adobe\helvetic\phvb8t.vf
-INPUT D:\PastaMiks\fonts\tfm\adobe\helvetic\phvb8r.tfm
-INPUT D:\PastaMiks\fonts\vf\adobe\helvetic\phvb8t.vf
-INPUT D:\PastaMiks\fonts\tfm\adobe\helvetic\phvb8r.tfm
 OUTPUT main.toc
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT D:\PastaMiks\fonts\vf\adobe\helvetic\phvb8t.vf
+INPUT D:\PastaMiks\fonts\tfm\adobe\helvetic\phvb8r.tfm
+INPUT D:\PastaMiks\fonts\vf\adobe\helvetic\phvb8t.vf
+INPUT D:\PastaMiks\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT .\Seções\Introducao.tex
 INPUT .\Seções\Introducao.tex
 INPUT Seções\Introducao.tex
@@ -575,12 +570,10 @@ INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\Seções\Analise de Requisitos.tex
 INPUT .\Seções\Analise de Requisitos.tex
-INPUT .\Seções\Analise de Requisitos.tex
-INPUT .\Seções\Analise de Requisitos.tex
 INPUT Seções\Analise de Requisitos.tex
 INPUT D:\PastaMiks\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT D:\PastaMiks\fonts\tfm\adobe\helvetic\phvb8t.tfm
-INPUT D:\PastaMiks\fonts\tfm\jknappen\ec\ecrm1440.tfm
+INPUT D:\PastaMiks\fonts\tfm\jknappen\ec\ecrm1200.tfm
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
@@ -589,11 +582,6 @@ INPUT D:\PastaMiks\fonts\vf\adobe\helvetic\phvb8t.vf
 INPUT D:\PastaMiks\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT D:\PastaMiks\fonts\vf\adobe\helvetic\phvr8t.vf
 INPUT D:\PastaMiks\fonts\tfm\adobe\helvetic\phvr8r.tfm
-INPUT .\img_arquivo\fundo_default.png
-INPUT .\img_arquivo\fundo_default.png
-INPUT .\img_arquivo\fundo_default.png
-INPUT .\img_arquivo\fundo_default.png
-INPUT D:\PastaMiks\fonts\tfm\jknappen\ec\ecrm1200.tfm
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
@@ -619,6 +607,24 @@ INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\Seções\Interface.tex
+INPUT .\Seções\Interface.tex
+INPUT Seções\Interface.tex
+INPUT .\img_arquivo\Prototipo_Interface.png
+INPUT .\img_arquivo\Prototipo_Interface.png
+INPUT .\img_arquivo\Prototipo_Interface.png
+INPUT .\img_arquivo\Prototipo_Interface.png
+INPUT .\img_arquivo\Prototipo_Interface.png
+INPUT .\img_arquivo\Prototipo_Interface.png
+INPUT .\img_arquivo\Prototipo_Interface.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
 INPUT .\Seções\Diagrama de Blocos.tex
 INPUT .\Seções\Diagrama de Blocos.tex
 INPUT Seções\Diagrama de Blocos.tex
@@ -629,6 +635,13 @@ INPUT .\img_arquivo\fundo_default.png
 INPUT .\Seções\Modelagem de Circuito.tex
 INPUT .\Seções\Modelagem de Circuito.tex
 INPUT Seções\Modelagem de Circuito.tex
+INPUT .\img_arquivo\Esquematico.png
+INPUT .\img_arquivo\Esquematico.png
+INPUT .\img_arquivo\Esquematico.png
+INPUT .\img_arquivo\Esquematico.png
+INPUT .\img_arquivo\Esquematico.png
+INPUT .\img_arquivo\Esquematico.png
+INPUT .\img_arquivo\Esquematico.png
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
@@ -657,9 +670,17 @@ INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
 INPUT .\Seções\Descricao de Firmware.tex
 INPUT .\Seções\Descricao de Firmware.tex
 INPUT Seções\Descricao de Firmware.tex
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
+INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
 INPUT .\img_arquivo\fundo_default.png
@@ -682,8 +703,6 @@ INPUT C:\Users\Arthur\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tc
 INPUT C:\Users\Arthur\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
 INPUT C:\Users\Arthur\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
 INPUT C:\Users\Arthur\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
-INPUT C:\Users\Arthur\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk
-INPUT C:\Users\Arthur\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk
 INPUT D:\PastaMiks\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT D:\PastaMiks\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT D:\PastaMiks\fonts\type1\public\amsfonts\cm\cmr10.pfb

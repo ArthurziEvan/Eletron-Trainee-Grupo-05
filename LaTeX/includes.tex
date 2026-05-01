@@ -17,7 +17,7 @@
 \usepackage{titlesec}
 
 % Tabelas e Alinhamento =====================================================================
-\usepackage{booktabs} % <--- ADICIONADO PARA RESOLVER O ERRO DA TABELA
+\usepackage{booktabs} 
 \usepackage{tabularx}
 \usepackage{longtable}
 \usepackage{float}
@@ -49,6 +49,10 @@
 \renewcommand{\footrulewidth}{0pt}
 
 \pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{}
+\fancyhead[R]{}
+
 \cfoot{{\color{cinza}
 \footnotesize{\fontfamily{phv}\selectfont
 \textbf{
@@ -101,7 +105,7 @@ www.eletronjun.com.br | contato@eletronjun.com.br}}
 \newcounter{rfreq}
 \newenvironment{rfreq}[1]{
     \refstepcounter{rfreq}
-    \subsubsection{[RF\ifnum\value{rfreq}<10 0\fi\arabic{rfreq}] \textcolor{black}{[#1]}}
+    \subsubsection*{[RF\ifnum\value{rfreq}<10 0\fi\arabic{rfreq}] \textcolor{black}{[#1]}}
     \begin{flushright}\begin{minipage}{0.9\textwidth}
 }{
     \end{minipage}\end{flushright}
@@ -110,11 +114,8 @@ www.eletronjun.com.br | contato@eletronjun.com.br}}
 \newcounter{nfreq}
 \newenvironment{nfreq}[1]{
     \refstepcounter{nfreq}
-    \subsubsection{[NF\ifnum\value{nfreq}<10 0\fi\arabic{nfreq}] \textcolor{black}{[#1]}}
+    \subsubsection*{[NF\ifnum\value{nfreq}<10 0\fi\arabic{nfreq}] \textcolor{black}{[#1]}}
     \begin{flushright}\begin{minipage}{0.9\textwidth}
 }{
     \end{minipage}\end{flushright}
 }
-\usepackage{fancyhdr}
-\setlength{\headheight}{40pt} 
-\addtolength{\topmargin}{-25pt}
