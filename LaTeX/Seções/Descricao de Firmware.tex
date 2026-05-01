@@ -1,1 +1,31 @@
-Esta seção detalha a arquitetura e os processos do firmware a ser desenvolvido para o sistema...
+O firmware será desenvolvido em C++ para o ESP32, utilizando uma lógica assíncrona. Isso permite que o processador cuide da leitura dos sensores e do controle dos LEDs ao mesmo tempo em que mantém o servidor web funcionando, sem que uma tarefa trave a outra. A estrutura principal será uma máquina de estados, que define como o hardware deve se comportar em cada modo (Desligado, Automático ou Ligado).
+
+\subsection{Sequência de Boot e Inicialização}
+Assim que o sistema é ligado, o firmware executa os preparativos básicos para operar:
+\begin{itemize}
+    \item \textbf{Setup de Hardware:} O código inicia a comunicação I2C com o sensor AHT20 e a comunicação SPI com o módulo de cartão microSD
+    \item \textbf{Conexão Wi-Fi:} O ESP32 busca a rede configurada e, após conectar, inicia o servidor web na porta 80 para permitir o acesso pela interface
+\end{itemize}
+
+\subsection{Ciclo de Execução e Máquina de Estados}
+No laço principal do código, o firmware monitora as variáveis de estado e o tempo:
+\begin{itemize}
+    \item \textbf{Seleção de Modo:} O sistema verifica qual modo está ativo. No "Automático", ele faz leituras periódicas; no "Ligado", fica pronto para comandos; e no "Desligado", interrompe as leituras e acende o LED vermelho
+    \item \textbf{Lógica de Sensoriamento:} O firmware lê o sinal do sensor e o converte para valores reais de temperatura ($^{\circ}C$) e umidade (\%)
+    \item \textbf{Processamento de Alertas:} O código compara os dados com os limites definidos e, caso os valores saiam do normal, envia um sinal de alerta para a interface web
+\end{itemize}
+
+\subsection{Gerenciamento de Arquivos no microSD}
+O sistema garante que as medições fiquem guardadas fisicamente:
+\begin{itemize}
+    \item \textbf{Rotina de Datalogger:} A cada nova coleta, o firmware abre o arquivo \texttt{dados.csv} no modo de anexo, salva a nova linha de informação e fecha o arquivo logo em seguida para garantir a segurança dos dados
+    \item \textbf{Envio do Histórico:} Quando solicitado via site, o firmware lê as informações salvas no cartão e as envia para serem exibidas na tela do usuário
+\end{itemize}
+
+\subsection{Protocolo de Comunicação Web}
+\markright{}
+Esta parte cuida da troca de informações entre o código e o navegador:
+\begin{itemize}
+    \item \textbf{Tratamento de Requisições:} O servidor processa pedidos como a troca de modo (rota \texttt{/modo}) ou o envio dos dados atuais (rota \texttt{/dados}) em formato JSON
+    \item \textbf{Sincronização de LEDs:} Sempre que o modo de operação muda pela interface, o firmware atualiza imediatamente o estado dos pinos GPIO, acendendo o LED correspondente (Verde, Amarelo ou Vermelho)
+\end{itemize}
