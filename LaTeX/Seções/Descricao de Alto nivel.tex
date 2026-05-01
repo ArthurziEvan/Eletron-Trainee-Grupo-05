@@ -22,3 +22,13 @@ Proporciona ao usuário uma visualização imediata do status operacional do dis
     \item \textbf{Sinalização Visual}: Três LEDs (Verde, Amarelo e Vermelho) compõem a interface física, permitindo identificar visualmente os estados de operação do hardware, estes leds funcionarão como: VERDE (ESTADO LIGADO), AMARELO (ESTADO AUTOMÁTICO), VERMELHO (ESTADO DESLIGADO)
     \item \textbf{Proteção Física}: Resistores limitadores de corrente são empregados em série com os LEDs, protegendo as saídas digitais do microcontrolador contra drenagem excessiva de corrente.
 \end{itemize}
+
+\subsection{Subsistema de Comunicação e Arquitetura de Software}
+Este bloco gerencia a conectividade sem fio e a entrega da interface de usuário, permitindo o monitoramento remoto e a configuração do dispositivo em tempo real.
+
+\begin{itemize}
+    \item \textbf{Conectividade Wi-Fi}: O microcontrolador opera nos modos \textit{Station} (conectado a uma rede local) ou \textit{Access Point} (criando sua própria rede para configuração inicial), utilizando a pilha TCP/IP nativa do ESP32.
+    \item \textbf{Servidor Web Assíncrono}: Utiliza-se a biblioteca \texttt{ESPAsyncWebServer} para processar requisições HTTP de forma não bloqueante. Isso garante que a entrega das páginas do site não interrompa as tarefas críticas, como a leitura do sensor AHT20 ou a escrita de logs no cartão SD.
+    \item \textbf{Gerenciamento de Arquivos (LittleFS)}: Os arquivos de \textit{front-end} (HTML, CSS e JavaScript) são armazenados em uma partição da memória flash do microcontrolador organizada pelo sistema de arquivos LittleFS. Essa abordagem separa a lógica de controle (C++) da interface visual, otimizando o uso da memória RAM.
+    \item \textbf{Interatividade (JSON e AJAX)}: A troca de dados entre o hardware e o navegador ocorre via pacotes JSON. Através de requisições assíncronas (AJAX), o site atualiza os valores de temperatura e umidade na tela automaticamente, eliminando a necessidade de recarregar a página pelo usuário.
+\end{itemize}
