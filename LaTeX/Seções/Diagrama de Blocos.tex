@@ -1,14 +1,9 @@
 
-
-
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{LaTeX/img_arquivo/DiagramaDeBlocos.png}
-    
-    \caption{Diagrama de Blocos do Sistema de Monitoramento de temperatura e umidade em ESP32 DevKit}
-    \label{fig:diagramaDeBlocos}
+    \includegraphics[width=0.8\textwidth]{img_arquivo/Diagrama_Blocos.png} 
+    \caption{Fluxograma de operação do software no ESP32}
+    \label{fig:Diagrama_Blocos}
 \end{figure}
 
-\subsection*{Descrição do Diagrama}
-
-O diagrama ilustra a arquitetura completa do sistema de monitoramento de temperaturae umidade do ambiente. O núcleo é o ESP32 DevKit, que recebe alimentação de 5V via USB e distribui internamente a referência de 3,3V para os periféricos. O Sensor AHT20 (temperatura e umidade) comunica-se com o ESP32 pelo barramento I²C (SDA/SCL). Os dados são armazenados localmente em um Módulo Micro SD via barramento SPI (MOSI, MISO, SCK, CS), que possui um level shifter integrado para adequação dos níveis de tensão. O ESP32 também publica as leituras em um Dashboard IoT acessível remotamente por Wi-Fi, utilizando protocolo HTTP com payload em JSON. Por fim, três LEDs controlados por GPIO indicam o estado operacional: verde (ligado), amarelo (automático) e vermelho (desligado/falha).
+O diagrama de blocos apresenta a estrutura geral do sistema embarcado, destacando a integração entre seus principais componentes. O ESP32 atua como unidade central, sendo responsável pela aquisição de dados do sensor de temperatura e umidade via barramento I2C, pelo armazenamento das informações em um módulo Micro SD por meio do SPI e pela comunicação com uma interface web via Wi-Fi. Além disso, o sistema conta com LEDs de sinalização controlados por GPIO, que indicam o estado de operação. A alimentação é fornecida por entrada USB, garantindo o funcionamento de todos os módulos. Dessa forma, o diagrama evidencia o fluxo de dados e a interação entre hardware e comunicação no sistema.
