@@ -2,72 +2,82 @@
 
 #define DHTTYPE DHT11
 
-DHTSensor::DHTSensor(uint8_t pin)
-    : dht(pin, DHTTYPE), pin(pin)
+// Intervalo padrão de leitura (ms)
+static const unsigned long INTERVALO_PADRAO = 5000;
+
+DHTSensor::DHTSensor(uint8_t pin) : dht(pin, DHTTYPE), pino(pin)
 {
-    mode = SENSOR_OFF;
-    interval = 5000; // padrão 5s
-    lastRead = 0;
-    temperature = 0;
-    humidity = 0;
-    lastReadSuccess = false;
+    modo = SENSOR_OFF;
+
+    intervaloLeitura = INTERVALO_PADRAO;
+    ultimoTempoLeitura = 0;
+
+    temperatura = 0.0;
+    umidade = 0.0;
+
+    leituraValida = false;
 }
 
 void DHTSensor::begin()
 {
     dht.begin();
-    Serial.println("[DHT] Sensor inicializado!");
+    Serial.println("[DHT] Sensor inicializado com sucesso");
 }
 
 void DHTSensor::setMode(SensorMode newMode)
 {
-    mode = newMode;
+    modo = newMode;
 }
 
 SensorMode DHTSensor::getMode()
 {
-    return mode;
+    return modo;
 }
 
 void DHTSensor::setInterval(unsigned long newInterval)
 {
-    interval = newInterval;
+    intervaloLeitura = newInterval;
 }
 
 void DHTSensor::update()
 {
-    if (mode != SENSOR_AUTO)
+    // Só executa no modo automático
+    if (modo != SENSOR_AUTO)
         return;
 
-    unsigned long now = millis();
+    unsigned long tempoAtual = millis();
 
-    if (now - lastRead >= interval)
+    // Verifica se já passou o intervalo configurado
+    if (tempoAtual - ultimoTempoLeitura >= intervaloLeitura)
     {
-        lastRead = now;
+        ultimoTempoLeitura = tempoAtual;
         readNow();
     }
 }
 
 bool DHTSensor::readNow()
 {
-    float h = dht.readHumidity();
-    float t = dht.readTemperature();
+    float umidadeLida = dht.readHumidity();
+    float temperaturaLida = dht.readTemperature();
 
-    if (isnan(h) || isnan(t))
+    // Validação da leitura
+    if (isnan(umidadeLida) || isnan(temperaturaLida))
     {
-        Serial.println("[DHT] Erro ao ler sensor!");
-        lastReadSuccess = false;
+        Serial.println("[DHT] Falha na leitura do sensor");
+        leituraValida = false;
         return false;
     }
 
-    humidity = h;
-    temperature = t;
-    lastReadSuccess = true;
+    // Atualiza estado interno
+    umidade = umidadeLida;
+    temperatura = temperaturaLida;
+    leituraValida = true;
 
-    Serial.print("[DHT] Temp: ");
-    Serial.print(temperature);
+    // Log formatado
+    Serial.print("[DHT] Temperatura: ");
+    Serial.print(temperatura);
     Serial.print(" °C | Umidade: ");
-    Serial.print(humidity);
+    Serial.print(umidade);
     Serial.println(" %");
 
     return true;
@@ -75,15 +85,15 @@ bool DHTSensor::readNow()
 
 float DHTSensor::getTemperature()
 {
-    return temperature;
+    return temperatura;
 }
 
 float DHTSensor::getHumidity()
 {
-    return humidity;
+    return umidade;
 }
 
 bool DHTSensor::isLastReadOk()
 {
-    return lastReadSuccess;
+    return leituraValida;
 }

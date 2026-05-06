@@ -4,46 +4,55 @@
 #include <Arduino.h>
 #include <DHT.h>
 
-// Estados do sensor
+// Modos de operação do sensor
 enum SensorMode
 {
-    SENSOR_OFF,
-    SENSOR_ON,
-    SENSOR_AUTO
+    SENSOR_OFF,   // sensor desligado
+    SENSOR_ON,    // leitura sob demanda
+    SENSOR_AUTO   // leitura automática por intervalo
 };
 
 class DHTSensor
 {
 private:
     DHT dht;
-    uint8_t pin;
-    SensorMode mode;
+    uint8_t pino;
 
-    unsigned long lastRead;
-    unsigned long interval;
+    SensorMode modo;
 
-    float temperature;
-    float humidity;
+    unsigned long ultimoTempoLeitura;
+    unsigned long intervaloLeitura;
 
-    bool lastReadSuccess;
+    float temperatura;
+    float umidade;
+
+    bool leituraValida;
 
 public:
+    // Construtor
     DHTSensor(uint8_t pin);
 
+    // Inicialização do sensor
     void begin();
 
+    // Controle de modo
     void setMode(SensorMode newMode);
     SensorMode getMode();
 
+    // Configuração de intervalo (modo automático)
     void setInterval(unsigned long newInterval);
 
-    void update(); // usado no loop
+    // Atualização automática (chamar no loop)
+    void update();
 
-    bool readNow(); // leitura manual
+    // Leitura manual imediata
+    bool readNow();
 
+    // Getters de dados
     float getTemperature();
     float getHumidity();
 
+    // Status da última leitura
     bool isLastReadOk();
 };
 

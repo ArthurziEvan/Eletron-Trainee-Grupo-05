@@ -2,7 +2,7 @@
 #include "modo.h"
 #include "leds/LedController.h"
 #include "sensor/dhtSensor.h"
-#include "sensor/testeLeds.h"
+#include "leds/testeLeds.h"
 
 // Definição centralizada dos pinos
 #define PINO_LED_VERMELHO 32
@@ -18,10 +18,7 @@ bool testeExecutado = false;
 // Estado atual do sistema
 ModoSistema modoAtual = DESLIGADO;
 
-/*
- Função responsável por executar o comportamento do sistema
- com base no modo atual. Aqui fica a lógica principal.
-*/
+
 void executarModo(ModoSistema modo) {
     switch (modo) {
         case TESTE:
