@@ -500,7 +500,7 @@
             </div>
 
             <div class="button-group">
-              <button class="btn btn-primary" id="saveBtn">Salvar</button>
+              <button class="btn btn-primary" id="saveBtn">Salva</button>
               <button class="btn btn-secondary" id="resetBtn">Cancelar</button>
             </div>
           </div>
@@ -577,13 +577,24 @@
         );
       }
 
-      function atualizarDisplay(temp, humid) {
-        document.getElementById("tempDisplay").textContent =
-          temp.toFixed(1) + "°C";
-        document.getElementById("humidDisplay").textContent =
-          humid.toFixed(0) + "%";
-        verificarAlertas(temp, humid);
-        adicionarAoHistorico(temp, humid);
+      async function buscarDados() {
+        try {
+          const response = await fetch("/api/dados");
+          const data = await response.json();
+
+          const temp = data.temperatura;
+          const humid = data.umidade;
+
+          document.getElementById("tempDisplay").textContent =
+            temp.toFixed(1) + "°C";
+          document.getElementById("humidDisplay").textContent =
+            humid.toFixed(0) + "%";
+
+          verificarAlertas(temp, humid);
+          adicionarAoHistorico(temp, humid);
+        } catch (error) {
+          console.error("Erro ao buscar dados:", error);
+        }
       }
 
       function verificarAlertas(temp, humid) {
@@ -671,6 +682,34 @@
           .join("");
       }
 
+      async function enviarModo(modo) {
+        try {
+          await fetch("/api/modo", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ mode: modo }),
+          });
+        } catch (error) {
+          console.error("Erro ao enviar modo:", error);
+        }
+      }
+
+      async function enviarConfig() {
+        try {
+          const response = await fetch("/api/config", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(config),
+          });
+
+          if (response.ok) {
+            salvarConfiguracao();
+          }
+        } catch (error) {
+          console.error("Erro ao enviar config:", error);
+        }
+      }
+
       document.querySelectorAll(".section-header").forEach((header) => {
         header.addEventListener("click", function () {
           const content = this.nextElementSibling;
@@ -685,6 +724,8 @@
             .querySelectorAll(".mode-option")
             .forEach((o) => o.classList.remove("selected"));
           this.classList.add("selected");
+          const modo = this.dataset.mode;
+          enviarModo(modo);
         });
       });
 
@@ -693,7 +734,7 @@
         config.tempMax = parseFloat(document.getElementById("tempMax").value);
         config.humidMin = parseFloat(document.getElementById("humidMin").value);
         config.humidMax = parseFloat(document.getElementById("humidMax").value);
-        salvarConfiguracao();
+        enviarConfig();
       });
 
       document
@@ -710,6 +751,8 @@
       window.addEventListener("load", function () {
         carregarConfiguracao();
         carregarHistorico();
+        buscarDados();
+        setInterval(buscarDados, CONFIG_DEFAULTS.updateInterval);
       });
     </script>
   </body>
