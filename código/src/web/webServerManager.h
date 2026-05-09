@@ -1,8 +1,13 @@
-﻿#ifndef WEBSERVERMANAGER_H
+#ifndef WEBSERVERMANAGER_H
 #define WEBSERVERMANAGER_H
-
-void iniciarWiFi();
-void iniciarServidor();
-void atualizarServidor();
-
+ 
+#include "storage/MemoriaSistema.h"
+ 
+class WebServerManager {
+public:
+    void begin(MemoriaSistema& mem);
+    void handle();
+};
+ 
 #endif
+ 
