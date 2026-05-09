@@ -97,9 +97,25 @@
             border: 1px solid #ffcccc;
             border-radius: 6px;
             padding: 12px;
-            display: flex;
+            display: none;
             gap: 10px;
             align-items: flex-start;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .alert-box.active {
+            display: flex;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .alert-icon {
@@ -171,14 +187,16 @@
         }
 
         .section-content {
-            padding: 16px;
-            display: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
             background: white;
             border-top: 1px solid #ddd;
         }
 
         .section-content.active {
-            display: block;
+            max-height: 1000px;
+            padding: 16px;
         }
 
         .mode-option {
@@ -375,44 +393,44 @@
                 <div class="status-grid">
                     <div class="status-item">
                         <div class="status-label">Temperatura </div>
-                        <div class="status-value">--°C  </div>
+                        <div class="status-value" id="tempDisplay">--°C  </div>
                     </div>
                     <div class="status-item">
-                        <div class="status-icon">💧</div>
+                        <div class="status-icon"></div>
                         <div class="status-label">Umidade</div>
-                        <div class="status-value">--%  </div>
+                        <div class="status-value" id="humidDisplay">--%  </div>
                     </div>
                 </div>
 
-                <div class="alert-box">
-                    <div class="alert-icon">⚠️</div>
+                <div class="alert-box" id="alertBox">
+                    <div class="alert-icon"></div>
                     <div class="alert-content">
                         <div class="alert-title">Alerta</div>
-                        <div class="alert-message">Temperatura abaixo do mínimo (18°C).</div>
+                        <div class="alert-message" id="alertMessage">Temperatura abaixo do mínimo (18°C).</div>
                     </div>
                 </div>
             </div>
 
             <div class="collapsible-section">
                 <button class="section-header active">
-                    <span>Modo de Operação</span>
+                    <span>Modo</span>
                     <span class="toggle-icon">⌄</span>
                 </button>
 
                 <div class="section-content active">
-                    <div class="mode-option selected">
+                    <div class="mode-option selected" data-mode="desligado">
                         <div class="mode-dot red"></div>
                         <div class="mode-name">Desligado</div>
                         <div class="mode-radio"></div>
                     </div>
 
-                    <div class="mode-option">
+                    <div class="mode-option" data-mode="automatico">
                         <div class="mode-dot yellow"></div>
                         <div class="mode-name">Automático</div>
                         <div class="mode-radio"></div>
                     </div>
 
-                    <div class="mode-option">
+                    <div class="mode-option" data-mode="ligado">
                         <div class="mode-dot green"></div>
                         <div class="mode-name">Ligado</div>
                         <div class="mode-radio"></div>
@@ -429,27 +447,27 @@
                 <div class="section-content">
                     <div class="config-group">
                         <label class="config-label">Temperatura Mínima (°C)</label>
-                        <input type="number" class="config-input" value="18" step="0.1">
+                        <input type="number" class="config-input" id="tempMin" value="18" step="0.1">
                     </div>
 
                     <div class="config-group">
                         <label class="config-label">Temperatura Máxima (°C)</label>
-                        <input type="number" class="config-input" value="30" step="0.1">
+                        <input type="number" class="config-input" id="tempMax" value="30" step="0.1">
                     </div>
 
                     <div class="config-group">
                         <label class="config-label">Umidade Minima (%)</label>
-                        <input type="number" class="config-input" value="40" min="0" max="100">
+                        <input type="number" class="config-input" id="humidMin" value="40" min="0" max="100">
                     </div>
 
                     <div class="config-group">
                         <label class="config-label">Umidade Maxima (%)</label>
-                        <input type="number" class="config-input" value="70" min="0" max="100">
+                        <input type="number" class="config-input" id="humidMax" value="70" min="0" max="100">
                     </div>
 
                     <div class="button-group">
-                        <button class="btn btn-primary">Salvar</button>
-                        <button class="btn btn-secondary">Padrão</button>
+                        <button class="btn btn-primary" id="saveBtn">Salva</button>
+                        <button class="btn btn-secondary" id="resetBtn">Cancelar</button>
                     </div>
                 </div>
             </div>
@@ -470,9 +488,9 @@
                             </tr>
                         </thead>
 
-                        <tbody>
+                        <tbody id="historyBody">
                             <tr>
-                                <td colspan="3" class="history-empty">Sem dados disponíveis</td>
+                                <td colspan="3" class="history-empty">Sem dados disponiveis</td>
                             </tr>
                         </tbody>
                     </table>
@@ -480,5 +498,210 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const CONFIG_DEFAULTS = {
+            tempMin: 18,
+            tempMax: 30,
+            humidMin: 40,
+            humidMax: 70,
+            updateInterval: 5000
+        };
+
+        let config = { ...CONFIG_DEFAULTS };
+        let historico = [];
+
+        function carregarConfiguracao() {
+            const salvo = localStorage.getItem('config');
+            if (salvo) {
+                config = JSON.parse(salvo);
+                document.getElementById('tempMin').value = config.tempMin;
+                document.getElementById('tempMax').value = config.tempMax;
+                document.getElementById('humidMin').value = config.humidMin;
+                document.getElementById('humidMax').value = config.humidMax;
+            }
+        }
+
+        function carregarHistorico() {
+            const salvo = localStorage.getItem('historico');
+            if (salvo) {
+                historico = JSON.parse(salvo);
+                atualizarTabelaHistorico();
+            }
+        }
+
+        function salvarConfiguracao() {
+            localStorage.setItem('config', JSON.stringify(config));
+        }
+
+        function salvarHistorico() {
+            localStorage.setItem('historico', JSON.stringify(historico.slice(0, 100)));
+        }
+
+        async function buscarDados() {
+            try {
+                const response = await fetch('/api/dados');
+                const data = await response.json();
+
+                const temp = data.temperatura;
+                const humid = data.umidade;
+
+                document.getElementById('tempDisplay').textContent = temp.toFixed(1) + '°C';
+                document.getElementById('humidDisplay').textContent = humid.toFixed(0) + '%';
+
+                verificarAlertas(temp, humid);
+                adicionarAoHistorico(temp, humid);
+
+            } catch (error) {
+                console.error('Erro ao buscar dados:', error);
+            }
+        }
+
+        function verificarAlertas(temp, humid) {
+            const alertBox = document.getElementById('alertBox');
+            const alertMessage = document.getElementById('alertMessage');
+
+            let temAlerta = false;
+            let mensagens = [];
+
+            if (temp < config.tempMin) {
+                temAlerta = true;
+                mensagens.push(`Temperatura abaixo do mínimo (${config.tempMin}°C)`);
+            }
+
+            if (temp > config.tempMax) {
+                temAlerta = true;
+                mensagens.push(`Temperatura acima do máximo (${config.tempMax}°C)`);
+            }
+
+            if (humid < config.humidMin) {
+                temAlerta = true;
+                mensagens.push(`Umidade abaixo do mínimo (${config.humidMin}%)`);
+            }
+
+            if (humid > config.humidMax) {
+                temAlerta = true;
+                mensagens.push(`Umidade acima do máximo (${config.humidMax}%)`);
+            }
+
+            if (temAlerta) {
+                alertMessage.textContent = mensagens.join('. ') + '.';
+                alertBox.classList.add('active');
+            } else {
+                alertBox.classList.remove('active');
+            }
+        }
+
+        function adicionarAoHistorico(temp, humid) {
+            const agora = new Date();
+            const hora = agora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+            const data = agora.toLocaleDateString('pt-BR');
+
+            const ultimo = historico[0];
+            if (ultimo && ultimo.data === data && ultimo.hora === hora) {
+                return;
+            }
+
+            historico.unshift({
+                data: data,
+                hora: hora,
+                temperatura: temp.toFixed(1),
+                umidade: humid.toFixed(0)
+            });
+
+            if (historico.length > 100) {
+                historico.pop();
+            }
+
+            salvarHistorico();
+            atualizarTabelaHistorico();
+        }
+
+        function atualizarTabelaHistorico() {
+            const tbody = document.getElementById('historyBody');
+
+            if (historico.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="3" class="history-empty">Sem dados disponíveis</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = historico.map(item => `
+                <tr>
+                    <td>${item.data} ${item.hora}</td>
+                    <td>${item.temperatura}°C</td>
+                    <td>${item.umidade}%</td>
+                </tr>
+            `).join('');
+        }
+
+        async function enviarModo(modo) {
+            try {
+                await fetch('/api/modo', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ mode: modo })
+                });
+            } catch (error) {
+                console.error('Erro ao enviar modo:', error);
+            }
+        }
+
+        async function enviarConfig() {
+            try {
+                const response = await fetch('/api/config', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(config)
+                });
+
+                if (response.ok) {
+                    salvarConfiguracao();
+                }
+            } catch (error) {
+                console.error('Erro ao enviar config:', error);
+            }
+        }
+
+        document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                this.classList.toggle('active');
+                content.classList.toggle('active');
+            });
+        });
+
+        document.querySelectorAll('.mode-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.mode-option').forEach(o => o.classList.remove('selected'));
+                this.classList.add('selected');
+                const modo = this.dataset.mode;
+                enviarModo(modo);
+            });
+        });
+
+        document.getElementById('saveBtn').addEventListener('click', function() {
+            config.tempMin = parseFloat(document.getElementById('tempMin').value);
+            config.tempMax = parseFloat(document.getElementById('tempMax').value);
+            config.humidMin = parseFloat(document.getElementById('humidMin').value);
+            config.humidMax = parseFloat(document.getElementById('humidMax').value);
+            enviarConfig();
+        });
+
+        document.getElementById('resetBtn').addEventListener('click', function() {
+            config = { ...CONFIG_DEFAULTS };
+            document.getElementById('tempMin').value = config.tempMin;
+            document.getElementById('tempMax').value = config.tempMax;
+            document.getElementById('humidMin').value = config.humidMin;
+            document.getElementById('humidMax').value = config.humidMax;
+            salvarConfiguracao();
+        });
+
+        window.addEventListener('load', function() {
+            carregarConfiguracao();
+            carregarHistorico();
+            buscarDados();
+            setInterval(buscarDados, CONFIG_DEFAULTS.updateInterval);
+        });
+    </script>
 </body>
 </html>
