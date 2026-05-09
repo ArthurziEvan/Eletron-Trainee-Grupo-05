@@ -5,6 +5,7 @@
 #include <DHT.h>
 #include "../model/dto.h"
 #include "../storage/MemoriaSistema.h"
+#include "../alerta/AlertaService.h"
 
 #define DHTTYPE DHT11
 
@@ -34,9 +35,12 @@ class DHTSensor {
 
         MemoriaSistema& memoria;
 
+        AlertaService& alertaService;
+
+
     public:
 
-        DHTSensor(uint8_t pin, MemoriaSistema& memoriaSistema);
+        DHTSensor(uint8_t pin, MemoriaSistema& memoriaSistema, AlertaService& servicoAlerta);
 
         void begin();
 

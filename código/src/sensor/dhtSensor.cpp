@@ -2,10 +2,11 @@
 
 static const unsigned long INTERVALO_PADRAO = 5000;
 
-DHTSensor::DHTSensor(uint8_t pin, MemoriaSistema& memoriaSistema)
+DHTSensor::DHTSensor(uint8_t pin, MemoriaSistema& memoriaSistema, AlertaService& servicoAlerta)
     : dht(pin, DHTTYPE),
       pino(pin),
-      memoria(memoriaSistema) {
+      memoria(memoriaSistema),
+      alertaService(servicoAlerta) {
 
     modo                = SENSOR_OFF;
     intervaloLeitura    = INTERVALO_PADRAO;
@@ -63,6 +64,7 @@ bool DHTSensor::readNow() {
     // salva na memória
     memoria.salvarLeitura(ultimaLeitura);
     memoria.adicionarHistorico(ultimaLeitura);
+    alertaService.verificar(ultimaLeitura);
 
     Serial.print("[DHT] Temperatura: ");
     Serial.print(ultimaLeitura.temperatura);

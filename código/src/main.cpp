@@ -4,6 +4,8 @@
 #include "sensor/DHTSensor.h"
 #include "leds/testeLeds.h"
 #include "storage/MemoriaSistema.h"
+#include "alerta/AlertaService.h"
+    
 
 #define PINO_LED_VERMELHO 32
 #define PINO_LED_AMARELO  25
@@ -11,8 +13,9 @@
 #define PINO_DHT          4
 
 MemoriaSistema memoria;
+AlertaService  alertaService(memoria);
 LedController  leds(PINO_LED_VERMELHO, PINO_LED_AMARELO);
-DHTSensor      sensor(PINO_DHT, memoria);
+DHTSensor      sensor(PINO_DHT, memoria, alerta);
 
 bool        testeExecutado = false;
 ModoSistema modoAtual      = DESLIGADO;
@@ -90,6 +93,33 @@ void exibirHistorico() {
         Serial.println(historico[i].timestamp);
     }
 }
+void exibirEstadoAlerta() {
+    EstadoAlerta estado = memoria.obterEstadoAlerta();
+
+    if (!estado.alertaAtivo) {
+        Serial.println("Sem alertas ativos");
+        return;
+    }
+
+    Serial.println("[ALERTA] situacao atual:");
+    if (estado.temperaturaBaixa) Serial.println("  - temperatura baixa");
+    if (estado.temperaturaAlta)  Serial.println("  - temperatura alta");
+    if (estado.umidadeBaixa)     Serial.println("  - umidade baixa");
+    if (estado.umidadeAlta)      Serial.println("  - umidade alta");
+}
+// ponto de entrada único — terminal e interface chamam a mesma função
+void aplicarConfiguracao(const ConfiguracaoAlerta& config) {
+    memoria.salvarConfiguracao(config);
+    Serial.println("Configuracao salva:");
+    Serial.print("  Temperatura: ");
+    Serial.print(config.temperaturaMinima);
+    Serial.print(" a ");
+    Serial.println(config.temperaturaMaxima);
+    Serial.print("  Umidade: ");
+    Serial.print(config.umidadeMinima);
+    Serial.print(" a ");
+    Serial.println(config.umidadeMaxima);
+}
 
 /*
  Função responsável por tratar comandos recebidos via terminal.
@@ -142,6 +172,38 @@ void tratarComando(char comando) {
         case '6':
             exibirHistorico();
             break;
+
+        case '7':
+            exibirEstadoAlerta();
+            break;
+
+        case '8': {
+            Serial.println("Digite: tempMin,tempMax,umidMin,umidMax");
+            Serial.println("Exemplo: 18.0,35.0,40.0,80.0");
+
+            while (Serial.available() == 0) {}
+
+            String entrada = Serial.readStringUntil('\n');
+            entrada.trim();
+
+            int i0 = entrada.indexOf(',');
+            int i1 = entrada.indexOf(',', i0 + 1);
+            int i2 = entrada.indexOf(',', i1 + 1);
+
+            if (i0 == -1 || i1 == -1 || i2 == -1) {
+                Serial.println("Formato invalido");
+                break;
+            }
+
+            ConfiguracaoAlerta config;
+            config.temperaturaMinima = entrada.substring(0, i0).toFloat();
+            config.temperaturaMaxima = entrada.substring(i0 + 1, i1).toFloat();
+            config.umidadeMinima     = entrada.substring(i1 + 1, i2).toFloat();
+            config.umidadeMaxima     = entrada.substring(i2 + 1).toFloat();
+
+            aplicarConfiguracao(config);
+            break;
+        }
     }
 }
 
@@ -160,6 +222,8 @@ void setup() {
     Serial.println("4 - Ler sensor (modo manual)");
     Serial.println("5 - Ultima leitura");
     Serial.println("6 - Historico de leituras");
+    Serial.println("7 - Estado dos alertas");
+    Serial.println("8 - Configurar limites de alerta");
 }
 
 void loop() {
