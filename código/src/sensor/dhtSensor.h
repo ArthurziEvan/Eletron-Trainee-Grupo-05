@@ -3,57 +3,56 @@
 
 #include <Arduino.h>
 #include <DHT.h>
+#include "../model/dto.h"
+#include "../storage/MemoriaSistema.h"
 
-// Modos de operação do sensor
-enum SensorMode
-{
-    SENSOR_OFF,   // sensor desligado
-    SENSOR_ON,    // leitura sob demanda
-    SENSOR_AUTO   // leitura automática por intervalo
+#define DHTTYPE DHT11
+
+enum SensorMode {
+    SENSOR_OFF,
+    SENSOR_ON,
+    SENSOR_AUTO
 };
 
-class DHTSensor
-{
-private:
-    DHT dht;
-    uint8_t pino;
+class DHTSensor {
 
-    SensorMode modo;
+    private:
 
-    unsigned long ultimoTempoLeitura;
-    unsigned long intervaloLeitura;
+        DHT dht;
 
-    float temperatura;
-    float umidade;
+        uint8_t pino;
 
-    bool leituraValida;
+        SensorMode modo;
 
-public:
-    // Construtor
-    DHTSensor(uint8_t pin);
+        unsigned long ultimoTempoLeitura;
 
-    // Inicialização do sensor
-    void begin();
+        unsigned long intervaloLeitura;
 
-    // Controle de modo
-    void setMode(SensorMode newMode);
-    SensorMode getMode();
+        LeituraSensor ultimaLeitura;
 
-    // Configuração de intervalo (modo automático)
-    void setInterval(unsigned long newInterval);
+        bool leituraValida;
 
-    // Atualização automática (chamar no loop)
-    void update();
+        MemoriaSistema& memoria;
 
-    // Leitura manual imediata
-    bool readNow();
+    public:
 
-    // Getters de dados
-    float getTemperature();
-    float getHumidity();
+        DHTSensor(uint8_t pin, MemoriaSistema& memoriaSistema);
 
-    // Status da última leitura
-    bool isLastReadOk();
+        void begin();
+
+        void setMode(SensorMode novoModo);
+
+        SensorMode getMode();
+
+        void setInterval(unsigned long novoIntervalo);
+
+        void update();
+
+        bool readNow();
+
+        LeituraSensor obterLeituraAtual();
+
+        bool isLastReadOk();
 };
 
 #endif
