@@ -1,50 +1,62 @@
 ﻿#include "MemoriaSistema.h"
 
-MemoriaSistema::MemoriaSistema() {
-    quantidadeAtualLeituras          = 0;
+MemoriaSistema::MemoriaSistema()
+{
+    quantidadeAtualLeituras = 0;
     estadoSistema.possuiConfiguracao = false;
-    estadoSistema.possuiLeitura      = false;
-    estadoSistema.modoAtual          = DESLIGADO;
+    estadoSistema.possuiLeitura = false;
+    estadoSistema.modoAtual = DESLIGADO;
 }
 
-void MemoriaSistema::salvarConfiguracao(const ConfiguracaoAlerta& configuracao) {
-    estadoSistema.configuracaoAtual  = configuracao;
+void MemoriaSistema::salvarConfiguracao(const ConfiguracaoAlerta &configuracao)
+{
+    estadoSistema.configuracaoAtual = configuracao;
     estadoSistema.possuiConfiguracao = true;
 }
 
-ConfiguracaoAlerta MemoriaSistema::obterConfiguracao() {
+ConfiguracaoAlerta MemoriaSistema::obterConfiguracao()
+{
     return estadoSistema.configuracaoAtual;
 }
 
-void MemoriaSistema::salvarModo(ModoSistema modo) {
+void MemoriaSistema::salvarModo(ModoSistema modo)
+{
     estadoSistema.modoAtual = modo;
 }
 
-ModoSistema MemoriaSistema::obterModo() {
+ModoSistema MemoriaSistema::obterModo()
+{
     return estadoSistema.modoAtual;
 }
 
-void MemoriaSistema::salvarLeitura(const LeituraSensor& leitura) {
+void MemoriaSistema::salvarLeitura(const LeituraSensor &leitura)
+{
     estadoSistema.ultimaLeitura = leitura;
     estadoSistema.possuiLeitura = true;
 }
 
-LeituraSensor MemoriaSistema::obterUltimaLeitura() {
+LeituraSensor MemoriaSistema::obterUltimaLeitura()
+{
     return estadoSistema.ultimaLeitura;
 }
 
-void MemoriaSistema::salvarEstadoAlerta(const EstadoAlerta& alerta) {
+void MemoriaSistema::salvarEstadoAlerta(const EstadoAlerta &alerta)
+{
     estadoSistema.alertaAtual = alerta;
 }
 
-EstadoAlerta MemoriaSistema::obterEstadoAlerta() {
+EstadoAlerta MemoriaSistema::obterEstadoAlerta()
+{
     return estadoSistema.alertaAtual;
 }
 
-void MemoriaSistema::adicionarHistorico(const LeituraSensor& leitura) {
+void MemoriaSistema::adicionarHistorico(const LeituraSensor &leitura)
+{
     // circular buffer: descarta a leitura mais antiga quando cheio
-    if (quantidadeAtualLeituras >= quantidadeMaximaLeituras) {
-        for (int i = 1; i < quantidadeMaximaLeituras; i++) {
+    if (quantidadeAtualLeituras >= quantidadeMaximaLeituras)
+    {
+        for (int i = 1; i < quantidadeMaximaLeituras; i++)
+        {
             historicoLeituras[i - 1] = historicoLeituras[i];
         }
         quantidadeAtualLeituras = quantidadeMaximaLeituras - 1;
@@ -54,14 +66,17 @@ void MemoriaSistema::adicionarHistorico(const LeituraSensor& leitura) {
     quantidadeAtualLeituras++;
 }
 
-LeituraSensor* MemoriaSistema::obterHistorico() {
+LeituraSensor *MemoriaSistema::obterHistorico()
+{
     return historicoLeituras;
 }
 
-int MemoriaSistema::obterQuantidadeHistorico() {
+int MemoriaSistema::obterQuantidadeHistorico()
+{
     return quantidadeAtualLeituras;
 }
 
-EstadoSistema MemoriaSistema::obterEstadoSistema() {
+EstadoSistema MemoriaSistema::obterEstadoSistema()
+{
     return estadoSistema;
 }

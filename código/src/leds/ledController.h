@@ -2,9 +2,10 @@
 #define LED_CONTROLLER_H
 
 #include <Arduino.h>
-#include "dto.h"
+#include "model/dto.h"
 
-class LedController {
+class LedController
+{
 private:
     int pinVermelho;
     int pinAmarelo;

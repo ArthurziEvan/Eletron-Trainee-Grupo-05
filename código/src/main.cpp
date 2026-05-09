@@ -5,56 +5,59 @@
 #include "leds/testeLeds.h"
 #include "storage/MemoriaSistema.h"
 #include "alerta/AlertaService.h"
-    
 
 #define PINO_LED_VERMELHO 32
-#define PINO_LED_AMARELO  25
-#define PINO_LED_VERDE    12
-#define PINO_DHT          4
+#define PINO_LED_AMARELO 25
+#define PINO_LED_VERDE 12
+#define PINO_DHT 4
 
 MemoriaSistema memoria;
-AlertaService  alertaService(memoria);
-LedController  leds(PINO_LED_VERMELHO, PINO_LED_AMARELO);
-DHTSensor      sensor(PINO_DHT, memoria, alerta);
+AlertaService alertaService(memoria);
+LedController leds(PINO_LED_VERMELHO, PINO_LED_AMARELO);
+DHTSensor sensor(PINO_DHT, memoria, alertaService);
 
-bool        testeExecutado = false;
-ModoSistema modoAtual      = DESLIGADO;
+bool testeExecutado = false;
+ModoSistema modoAtual = DESLIGADO;
 
+void executarModo(ModoSistema modo)
+{
+    switch (modo)
+    {
 
-void executarModo(ModoSistema modo) {
-    switch (modo) {
+    case TESTE:
+        if (!testeExecutado)
+        {
+            executarTesteLeds();
+            testeExecutado = true;
+            modoAtual = DESLIGADO;
+            Serial.println("Teste finalizado");
+        }
+        break;
 
-        case TESTE:
-            if (!testeExecutado) {
-                executarTesteLeds();
-                testeExecutado = true;
-                modoAtual = DESLIGADO;
-                Serial.println("Teste finalizado");
-            }
-            break;
-
-        case DESLIGADO:
+    case DESLIGADO:
         // LED vermelho ligado, nenhum processamento do sensor
-            leds.setModo(DESLIGADO);
-            break;
+        leds.setModo(DESLIGADO);
+        break;
 
-        case LIGADO:
+    case LIGADO:
         // LED amarelo ligado, leitura do sensor apenas quando solicitado
-            leds.setModo(LIGADO);
-            break;
+        leds.setModo(LIGADO);
+        break;
 
-        case AUTOMATICO:
-        //led amarelo e vermelho ligados 
-            leds.setModo(AUTOMATICO);
-            sensor.update();
-            break;
+    case AUTOMATICO:
+        // led amarelo e vermelho ligados
+        leds.setModo(AUTOMATICO);
+        sensor.update();
+        break;
     }
 }
 
-void exibirUltimaLeitura() {
+void exibirUltimaLeitura()
+{
     EstadoSistema estado = memoria.obterEstadoSistema();
 
-    if (!estado.possuiLeitura) {
+    if (!estado.possuiLeitura)
+    {
         Serial.println("Nenhuma leitura disponivel ainda");
         return;
     }
@@ -68,21 +71,24 @@ void exibirUltimaLeitura() {
     Serial.println(leitura.timestamp);
 }
 
-void exibirHistorico() {
+void exibirHistorico()
+{
     int quantidade = memoria.obterQuantidadeHistorico();
 
-    if (quantidade == 0) {
+    if (quantidade == 0)
+    {
         Serial.println("Historico vazio");
         return;
     }
 
-    LeituraSensor* historico = memoria.obterHistorico();
+    LeituraSensor *historico = memoria.obterHistorico();
 
     Serial.print("Historico (");
     Serial.print(quantidade);
     Serial.println(" leituras):");
 
-    for (int i = 0; i < quantidade; i++) {
+    for (int i = 0; i < quantidade; i++)
+    {
         Serial.print("[");
         Serial.print(i + 1);
         Serial.print("] T: ");
@@ -93,22 +99,29 @@ void exibirHistorico() {
         Serial.println(historico[i].timestamp);
     }
 }
-void exibirEstadoAlerta() {
+void exibirEstadoAlerta()
+{
     EstadoAlerta estado = memoria.obterEstadoAlerta();
 
-    if (!estado.alertaAtivo) {
+    if (!estado.alertaAtivo)
+    {
         Serial.println("Sem alertas ativos");
         return;
     }
 
     Serial.println("[ALERTA] situacao atual:");
-    if (estado.temperaturaBaixa) Serial.println("  - temperatura baixa");
-    if (estado.temperaturaAlta)  Serial.println("  - temperatura alta");
-    if (estado.umidadeBaixa)     Serial.println("  - umidade baixa");
-    if (estado.umidadeAlta)      Serial.println("  - umidade alta");
+    if (estado.temperaturaBaixa)
+        Serial.println("  - temperatura baixa");
+    if (estado.temperaturaAlta)
+        Serial.println("  - temperatura alta");
+    if (estado.umidadeBaixa)
+        Serial.println("  - umidade baixa");
+    if (estado.umidadeAlta)
+        Serial.println("  - umidade alta");
 }
 // ponto de entrada único — terminal e interface chamam a mesma função
-void aplicarConfiguracao(const ConfiguracaoAlerta& config) {
+void aplicarConfiguracao(const ConfiguracaoAlerta &config)
+{
     memoria.salvarConfiguracao(config);
     Serial.println("Configuracao salva:");
     Serial.print("  Temperatura: ");
@@ -125,89 +138,99 @@ void aplicarConfiguracao(const ConfiguracaoAlerta& config) {
  Função responsável por tratar comandos recebidos via terminal.
  Aqui fazemos o mapeamento entre entrada do usuário e ações do sistema.
 */
-void tratarComando(char comando) {
-    switch (comando) {
+void tratarComando(char comando)
+{
+    switch (comando)
+    {
 
-        case '0':
-            modoAtual = TESTE;
-            testeExecutado = false;
-            Serial.println("Modo: Teste de LEDs");
-            break;
+    case '0':
+        modoAtual = TESTE;
+        testeExecutado = false;
+        Serial.println("Modo: Teste de LEDs");
+        break;
 
-        case '1':
-            modoAtual = DESLIGADO;
-            sensor.setMode(SENSOR_OFF);
-            memoria.salvarModo(DESLIGADO);
-            Serial.println("Modo: Desligado");
-            break;
+    case '1':
+        modoAtual = DESLIGADO;
+        sensor.setMode(SENSOR_OFF);
+        memoria.salvarModo(DESLIGADO);
+        Serial.println("Modo: Desligado");
+        break;
 
-        case '2':
-            modoAtual = LIGADO;
-            sensor.setMode(SENSOR_OFF);
-            memoria.salvarModo(LIGADO);
-            Serial.println("Modo: Ligado");
-            Serial.println("Digite 4 para ler o sensor");
-            break;
+    case '2':
+        modoAtual = LIGADO;
+        sensor.setMode(SENSOR_OFF);
+        memoria.salvarModo(LIGADO);
+        Serial.println("Modo: Ligado");
+        Serial.println("Digite 4 para ler o sensor");
+        break;
 
-        case '3':
-            modoAtual = AUTOMATICO;
-            sensor.setMode(SENSOR_AUTO);
-            memoria.salvarModo(AUTOMATICO);
-            Serial.println("Modo: Automatico");
-            break;
+    case '3':
+        modoAtual = AUTOMATICO;
+        sensor.setMode(SENSOR_AUTO);
+        memoria.salvarModo(AUTOMATICO);
+        Serial.println("Modo: Automatico");
+        break;
 
-        case '4':
-            if (modoAtual == LIGADO) {
-                Serial.println("Leitura manual do sensor:");
-                sensor.readNow();
-            } else {
-                Serial.println("Comando invalido neste modo");
-            }
-            break;
+    case '4':
+        if (modoAtual == LIGADO)
+        {
+            Serial.println("Leitura manual do sensor:");
+            sensor.readNow();
+        }
+        else
+        {
+            Serial.println("Comando invalido neste modo");
+        }
+        break;
 
-        case '5':
-            exibirUltimaLeitura();
-            break;
+    case '5':
+        exibirUltimaLeitura();
+        break;
 
-        case '6':
-            exibirHistorico();
-            break;
+    case '6':
+        exibirHistorico();
+        break;
 
-        case '7':
-            exibirEstadoAlerta();
-            break;
+    case '7':
+        exibirEstadoAlerta();
+        break;
 
-        case '8': {
-            Serial.println("Digite: tempMin,tempMax,umidMin,umidMax");
-            Serial.println("Exemplo: 18.0,35.0,40.0,80.0");
+    case '8':
+    {
+        Serial.println("Digite: tempMin,tempMax,umidMin,umidMax");
+        Serial.println("Exemplo: 18.0,35.0,40.0,80.0");
 
-            while (Serial.available() == 0) {}
+        while (Serial.available() == 0)
+        {
+        }
 
-            String entrada = Serial.readStringUntil('\n');
-            entrada.trim();
+        String entrada = Serial.readStringUntil('\n');
+        entrada.trim();
 
-            int i0 = entrada.indexOf(',');
-            int i1 = entrada.indexOf(',', i0 + 1);
-            int i2 = entrada.indexOf(',', i1 + 1);
+        int i0 = entrada.indexOf(',');
+        int i1 = entrada.indexOf(',', i0 + 1);
+        int i2 = entrada.indexOf(',', i1 + 1);
 
-            if (i0 == -1 || i1 == -1 || i2 == -1) {
-                Serial.println("Formato invalido");
-                break;
-            }
-
-            ConfiguracaoAlerta config;
-            config.temperaturaMinima = entrada.substring(0, i0).toFloat();
-            config.temperaturaMaxima = entrada.substring(i0 + 1, i1).toFloat();
-            config.umidadeMinima     = entrada.substring(i1 + 1, i2).toFloat();
-            config.umidadeMaxima     = entrada.substring(i2 + 1).toFloat();
-
-            aplicarConfiguracao(config);
+        if (i0 == -1 || i1 == -1 || i2 == -1)
+        {
+            Serial.println("Formato invalido");
             break;
         }
+
+        ConfiguracaoAlerta config;
+        config.temperaturaMinima = entrada.substring(0, i0).toFloat();
+        config.temperaturaMaxima = entrada.substring(i0 + 1, i1).toFloat();
+        config.umidadeMinima = entrada.substring(i1 + 1, i2).toFloat();
+        config.umidadeMaxima = entrada.substring(i2 + 1).toFloat();
+
+        aplicarConfiguracao(config);
+        break;
+    }
     }
 }
 
-void setup() {
+void setup()
+{
     Serial.begin(115200);
 
     leds.begin();
@@ -226,8 +249,10 @@ void setup() {
     Serial.println("8 - Configurar limites de alerta");
 }
 
-void loop() {
-    if (Serial.available()) {
+void loop()
+{
+    if (Serial.available())
+    {
         char comando = Serial.read();
         tratarComando(comando);
     }
