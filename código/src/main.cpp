@@ -206,6 +206,7 @@ void setup() {
     leds.begin();
     sensor.begin();
     initTesteLeds(PINO_LED_VERMELHO, PINO_LED_AMARELO, PINO_LED_VERDE);
+    memoria.carregarPreferences(); 
     webManager.begin(memoria);
 
     Serial.println("=== Sistema iniciado ===");
@@ -221,13 +222,17 @@ void setup() {
 }
 
 void loop() {
-    modoAtual = memoria.obterEstadoSistema().modo;
-
+    modoAtual = memoria.obterEstadoSistema().modoAtual;
+    if (modoMemoria != modoAtual){
+        modoAtual = modoMemoria;
+        sensor.setMode(modoAtual == AUTOMATICO ? SENSOR_AUTO: SENSOR_OFF)
+    }
     if (Serial.available()) {
         char comando = Serial.read();
         tratarComando(comando);
     }
 
     executarModo(modoAtual);
+    webManager.handle();
     delay(10);
 }

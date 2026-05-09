@@ -1,4 +1,5 @@
 ﻿#include "MemoriaSistema.h"
+#include <Preferences.h>
 
 MemoriaSistema::MemoriaSistema()
 {
@@ -12,6 +13,14 @@ void MemoriaSistema::salvarConfiguracao(const ConfiguracaoAlerta &configuracao)
 {
     estadoSistema.configuracaoAtual = configuracao;
     estadoSistema.possuiConfiguracao = true;
+
+    Preferences prefs;
+    prefs.begin("config", false);
+    prefs.putFloat("tempMin", config.temperaturaMinima);
+    prefs.putFloat("tempMax", config.temperaturaMaxima);
+    prefs.putFloat("humMin",  config.umidadeMinima);
+    prefs.putFloat("humMax",  config.umidadeMaxima);
+    prefs.end();
 }
 
 ConfiguracaoAlerta MemoriaSistema::obterConfiguracao()
