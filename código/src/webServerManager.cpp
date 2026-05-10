@@ -1,12 +1,13 @@
 #include <WiFi.h>
 #include <WebServer.h>
+#include <FS.h>
 #include <LittleFS.h>
 #include "WebServerManager.h"
-#include "model/dto.h"
+#include "dto.h"
 #include <ArduinoJson.h>
 
-const char* ssid  = "SUA_REDE";
-const char* senha = "SUA_SENHA";
+const char* ssid  = "Mustafa2-2G";
+const char* senha = "W+jls2540B";
 
 static WebServer       server(80);
 static MemoriaSistema* _memoria = nullptr;
@@ -15,14 +16,20 @@ void WebServerManager::begin(MemoriaSistema& mem) {
     _memoria = &mem;
 
     WiFi.begin(ssid, senha);
+
+    unsigned long inicio = millis();
     while (WiFi.status() != WL_CONNECTED) {
+        if (millis() - inicio > 15000) {
+            Serial.println("\nFalha ao conectar WiFi");
+            return;
+        }
         delay(500);
         Serial.print(".");
     }
     Serial.println("\nWiFi conectado!");
     Serial.println(WiFi.localIP());
 
-    if (!LittleFS.begin()) {
+    if (!LittleFS.begin(true)) {
         Serial.println("Erro ao montar LittleFS");
         return;
     }
@@ -53,7 +60,10 @@ void WebServerManager::begin(MemoriaSistema& mem) {
     });
 
     server.on("/api/modo", HTTP_GET, []() {
-        String json = "{\"modo\":" + String(_memoria->obterModo()) + "}";
+        ModoSistema modo = _memoria->obterModo();
+        const char* nomes[] = { "desligado", "desligado", "ligado", "automatico" };
+        const char* nome = (modo >= TESTE && modo <= AUTOMATICO) ? nomes[modo] : "desligado";
+        String json = "{\"modo\":\"" + String(nome) + "\"}";
         server.send(200, "application/json", json);
     });
 
@@ -84,6 +94,16 @@ void WebServerManager::begin(MemoriaSistema& mem) {
         }
 
         _memoria->salvarModo(novoModo);
+        server.send(200, "application/json", "{\"ok\":true}");
+    });
+
+    // Leitura manual — só aceita se o modo atual for LIGADO
+    server.on("/api/ler", HTTP_POST, []() {
+        if (_memoria->obterModo() != LIGADO) {
+            server.send(403, "application/json", "{\"erro\":\"modo invalido\"}");
+            return;
+        }
+        _memoria->solicitarLeituraManual();
         server.send(200, "application/json", "{\"ok\":true}");
     });
 

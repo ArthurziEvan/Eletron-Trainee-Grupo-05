@@ -16,10 +16,10 @@ void MemoriaSistema::salvarConfiguracao(const ConfiguracaoAlerta &configuracao)
 
     Preferences prefs;
     prefs.begin("config", false);
-    prefs.putFloat("tempMin", config.temperaturaMinima);
-    prefs.putFloat("tempMax", config.temperaturaMaxima);
-    prefs.putFloat("humMin",  config.umidadeMinima);
-    prefs.putFloat("humMax",  config.umidadeMaxima);
+    prefs.putFloat("tempMin", configuracao.temperaturaMinima);
+    prefs.putFloat("tempMax", configuracao.temperaturaMaxima);
+    prefs.putFloat("humMin",  configuracao.umidadeMinima);
+    prefs.putFloat("humMax",  configuracao.umidadeMaxima);
     prefs.end();
 }
 
@@ -31,6 +31,11 @@ ConfiguracaoAlerta MemoriaSistema::obterConfiguracao()
 void MemoriaSistema::salvarModo(ModoSistema modo)
 {
     estadoSistema.modoAtual = modo;
+
+    Preferences prefs;
+    prefs.begin("config", false);
+    prefs.putInt("modo", (int)modo);
+    prefs.end();
 }
 
 ModoSistema MemoriaSistema::obterModo()
@@ -88,4 +93,45 @@ int MemoriaSistema::obterQuantidadeHistorico()
 EstadoSistema MemoriaSistema::obterEstadoSistema()
 {
     return estadoSistema;
+}
+ 
+void MemoriaSistema::solicitarLeituraManual()
+{
+    _leituraManualSolicitada = true;
+}
+ 
+bool MemoriaSistema::consumirLeituraManual()
+{
+    if (_leituraManualSolicitada) {
+        _leituraManualSolicitada = false;
+        return true;
+    }
+    return false;
+}
+
+void MemoriaSistema::carregarPreferences() {
+    Preferences prefs;
+
+    // Tenta abrir em leitura. Se o namespace ainda não existe
+    // (primeiro boot), begin() retorna false → sai sem erro.
+    if (!prefs.begin("config", true)) {
+        Serial.println("[MEM] Sem preferencias salvas (primeiro boot)");
+        return;
+    }
+
+    if (prefs.isKey("tempMin")) {
+        estadoSistema.configuracaoAtual.temperaturaMinima = prefs.getFloat("tempMin");
+        estadoSistema.configuracaoAtual.temperaturaMaxima = prefs.getFloat("tempMax");
+        estadoSistema.configuracaoAtual.umidadeMinima     = prefs.getFloat("humMin");
+        estadoSistema.configuracaoAtual.umidadeMaxima     = prefs.getFloat("humMax");
+        estadoSistema.possuiConfiguracao = true;
+        Serial.println("[MEM] Configuracao de alerta carregada");
+    }
+
+    if (prefs.isKey("modo")) {
+        estadoSistema.modoAtual = (ModoSistema)prefs.getInt("modo");
+        Serial.println("[MEM] Modo carregado");
+    }
+
+    prefs.end();
 }

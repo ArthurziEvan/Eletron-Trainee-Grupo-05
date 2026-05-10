@@ -3,9 +3,9 @@
 
 #include <Arduino.h>
 #include <DHT.h>
-#include "../model/dto.h"
-#include "../storage/MemoriaSistema.h"
-#include "../alerta/AlertaService.h"
+#include "dto.h"
+#include "MemoriaSistema.h"
+#include "AlertaService.h"
 
 #define DHTTYPE DHT11
 

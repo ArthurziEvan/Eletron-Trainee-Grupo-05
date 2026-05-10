@@ -2,7 +2,7 @@
 #define MEMORIA_SISTEMA_H
 
 #include <Arduino.h>
-#include "../model/dto.h"
+#include "dto.h"
 
 class MemoriaSistema {
 
@@ -15,6 +15,8 @@ class MemoriaSistema {
         LeituraSensor historicoLeituras[quantidadeMaximaLeituras];
 
         int quantidadeAtualLeituras;
+
+        bool _leituraManualSolicitada = false;
 
     public:
 
@@ -37,6 +39,10 @@ class MemoriaSistema {
         int obterQuantidadeHistorico();
 
         EstadoSistema obterEstadoSistema();
-};
+        void carregarPreferences();
+        void salvarPreferences();
 
+        void solicitarLeituraManual();
+        bool consumirLeituraManual();
+};
 #endif

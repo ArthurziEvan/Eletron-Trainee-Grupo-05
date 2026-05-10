@@ -2,8 +2,7 @@
 #define LED_CONTROLLER_H
 
 #include <Arduino.h>
-#include "model/dto.h"
-
+#include "dto.h"
 class LedController
 {
 private:

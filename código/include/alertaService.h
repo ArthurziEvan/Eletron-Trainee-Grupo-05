@@ -2,8 +2,8 @@
 #define ALERTA_SERVICE_H
 
 #include <Arduino.h>
-#include "../model/dto.h"
-#include "../storage/MemoriaSistema.h"
+#include "dto.h"
+#include "MemoriaSistema.h"
 
 class AlertaService {
 
